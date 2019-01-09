@@ -38,7 +38,7 @@
             </div>
             <div id="modal" onclick="menuToggle()">
               </div>
-            <div class="container">
+            <div id="container">
             <div>
             </div>
                 <div id="welcome"> 
@@ -64,57 +64,74 @@
 
 
                     <h3>Hello, I'm Joseph and I build websites.</h3>
-<p>For client sites normally wordpress is my tool of choice.</p>
+                    <p>For client sites normally wordpress is my tool of choice.</p>
 
-<h3>Why wordpress?</h3> 
+                    <h3>Why wordpress?</h3> 
 
-<p>Wordpress is a content management system (CMS). The designer/developer codes up how the site will look (the theme) and behave (plug-ins). Wordpress has an admin portal which allows the site owner to login and update content, add pages and even update wordpress-all without needing to contact the developer or mess with code. </p>
+                    <p>Wordpress is a content management system (CMS). The designer/developer codes up how the site will look (the theme) and behave (plug-ins). Wordpress has an admin portal which allows the site owner to login and update content, add pages and even update wordpress-all without needing to contact the developer or mess with code. </p>
 
-<h3>Wordpress advantages:</h3>
-	<ul>
-	<li>Powers 30% of the web <a href="https://w3techs.com/technologies/overview/content_management/all"> circa Jan 2019.</a> </li>
-<li>Security updates </li>
-<li>Many useful plugins which can help with SEO, content management, forms etc…</li>
-<li>Large developer base, many developers are familiar and can help with existing sites.</li>
-</ul>
-<h3>Couple disadvantages:</h3>
-<ul>
-<li>Can be a little slower. </li>
-<li>Requires updates, which seldom can interfere with the current site.</li>
-</ul>
-</div>
-            </div>
+                    <h3>Wordpress advantages:</h3>
+                      <ul>
+                      <li>Powers 30% of the web <a href="https://w3techs.com/technologies/overview/content_management/all"> circa Jan 2019.</a> </li>
+                    <li>Security updates </li>
+                    <li>Many useful plugins which can help with SEO, content management, forms etc…</li>
+                    <li>Large developer base, many developers are familiar and can help with existing sites.</li>
+                    </ul>
+                    <h3>Couple disadvantages:</h3>
+                    <ul>
+                    <li>Can be a little slower. </li>
+                    <li>Requires updates, which seldom can interfere with the current site.</li>
+                    </ul>
+                    </div>
+              </div>
             <div id="build">
 
                 <div class="section"><h2>Build</h2>
- <img alt="image of uplyftwellness.com site" src="media/uplyft1.png"></img>
- <img class="mobile" alt="image of uplyftwellness.com mobile site" src="media/uplyft2.png"></img>
+                  <img alt="image of uplyftwellness.com site" src="media/uplyft1.png"></img>
+                  <img class="mobile" alt="image of uplyftwellness.com mobile site" src="media/uplyft2.png"></img>
 
- <a href="uplyftwellness.com">visit site</a>
+                  <a href="uplyftwellness.com">visit site</a>
 
-<div class="quote"><p>“I love the website and everything you've done!” -Isi. 
-</p></div>
+                  <div class="quote"><p>“I love the website and everything you've done!” -Isi. 
+                  </p></div>
 
-<img alt="image of swan website" src="media/swan1.png"></img>
- <img class="mobile" alt="image of swan mobile website" src="media/swan2.png"></img>
+                  <img alt="image of swan website" src="media/swan1.png"></img>
+                  <img class="mobile" alt="image of swan mobile website" src="media/swan2.png"></img>
 
- <a href="swan.climatejourney.com">visit site</a>
+                  <a href="swan.climatejourney.com">visit site</a>
 
-<div class="quote"><p>“Joseph, it's really great. Thank you!” -Saiqa. 
-</p></div>
+                  <div class="quote"><p>“Joseph, it's really great. Thank you!” -Saiqa. 
+                  </p></div>
 
                 </div>
-
+            </div>
 
                 <div id="connect">
 
                 <div class="section"><h2>Connect</h2>
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
- 
-          
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-          
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                  
+                  <div class="container">  
+                    <form id="contact" method="post" action="send_form_email.php">
+                      <h4>Contact us today, and get reply with in 24 hours!</h4>
+                      <fieldset>
+                        <input placeholder="Name" type="text" name="name" tabindex="1" required autofocus>
+                      </fieldset>
+                      <fieldset>
+                        <input placeholder="Email Address" type="email" name="email" tabindex="2" required>
+                      </fieldset>
+                      <fieldset>
+                        <input placeholder="Phone Number" type="tel" name="tel" tabindex="3" required>
+                      </fieldset>
+                      <fieldset>
+                        <textarea placeholder="Message Here...." name="comments" tabindex="4" required></textarea>
+                      </fieldset>
+                      <fieldset>
+                        <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+                      </fieldset>
+                    </form>
+                   
+                    
+                  </div>
               </div>
           
                 
