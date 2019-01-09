@@ -58,14 +58,14 @@ header {
   @media screen and (max-width: 480px) {
     .topNav {
       height: 60px;
-      background-color: rgba(43, 43, 114, 0.2);
+      background-color: rgba(74, 129, 200, 0.2);
       line-height: 40px; }
       .topNav .title {
         line-height: 40px; } }
 
 .smallNav {
   height: 60px;
-  background-color: rgba(43, 43, 114, 0.2);
+  background-color: rgba(74, 129, 200, 0.2);
   line-height: 40px;
   transition: 0.7s;
   pointer-events: none; }
@@ -215,7 +215,7 @@ li {
   justify-items: center; }
 
 #welcome {
-  background-image: url(abstract-black-cell-phone-TylerLastovich.jpg);
+  background-image: url(media/abstract-black-cell-phone-TylerLastovich.jpg);
   background-size: cover;
   background-position: center;
   min-width: 100vw;
@@ -261,6 +261,20 @@ li {
   max-width: 1000px;
   margin: 0 auto;
   min-height: 100vh; }
+
+#build img {
+  width: 40vw;
+  border-radius: 8px;
+  border: 3px solid #131010;
+  padding: 5px; }
+  @media screen and (min-width: 1200px) {
+    #build img {
+      width: 400px; } }
+  @media screen and (max-width: 480px) {
+    #build img {
+      width: 300px; } }
+#build .mobile {
+  width: calc(40vw/2); }
 
 footer {
   width: 100%;

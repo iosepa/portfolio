@@ -3,12 +3,14 @@ $break-large: 1200px;
 $popoutText: #e5e5e5;
 $smallNavBg: #494141;
 $smallNavFg: $popoutText;
-$navBg: rgba(43, 43, 114, 0.2);
 $outsideWidth: 1120px;
 $firstFont: "Exo"; 
 $regFontSize: 1em;
 $lineHeight: calc(#{$regFontSize}*1.618);
 $headerColor: #4a81c8;
+$navBg: rgba($headerColor, 0.2);
+$imageWidth: 40vw;
+
 
 @mixin socialLinks {
   font-size: 1.8em;
@@ -310,7 +312,7 @@ h2 {
   }
   
   #welcome {
-    background-image: url(abstract-black-cell-phone-TylerLastovich.jpg);
+    background-image: url(media/abstract-black-cell-phone-TylerLastovich.jpg);
     background-size: cover;
     background-position: center;
     min-width: 100vw;
@@ -356,6 +358,33 @@ h2 {
   margin: 0 auto;
   min-height: 100vh;
 }
+
+
+#build {
+  img {
+    
+    width: $imageWidth;
+    border-radius: 8px;
+    border: 3px solid rgb(19, 16, 16);
+    padding: 5px;
+
+
+
+    @media screen and (min-width: $break-large){
+      width: 400px;
+    }
+    @media screen and (max-width: $break-small){
+      width: 300px;
+    }
+
+
+
+  }
+  .mobile {
+    width: calc(#{$imageWidth}/2);
+  }
+}
+
 
   footer {
     width: 100%;
