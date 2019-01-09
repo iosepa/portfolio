@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+          <meta charset="UTF-8">
+            <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+            <script src="functions.js"></script>
+
+        </head>
+    </head>
+    <body onresize="resizeFun()">
+            <header id="nav" class="topNav">
+              <div id="navDiv">
+              <div class="title"><a href="#" onclick="shrinkNav(0)">io<span id="subTitle">sepa.io</span></a></div>
+                <ul id="menu">
+                  <li><a class="hover hoverUl" href="#about" onclick="shrinkNav(10)">about</a></li>
+                  <li><a class="hover hoverUl" href="#build" onclick="shrinkNav(10)">build</a></li>
+                  <li><a class="hover hoverUl" href="#connect" onclick="shrinkNav(10)">connect</a></li>
+                </ul>
+              <div id="menu-toggle" class="menu-toggle toggleBox" onclick="menuToggle()">
+                  <div class="bar1"></div>
+                  <div class="bar2"></div>
+                  <div class="bar3"></div>
+              </div>
+</div>
+            </header>
+            <div id="popout" class="notPopped">
+                <ul id="menuSide" onclick="menuToggle(), shrinkNav(10)">
+                    <li><a class="hover hoverUl" href="#about" >about</a></li>
+                    <li><a class="hover hoverUl" href="#build" onclick="menuToggle(), shrinkNav(10)">build</a></li>
+                    <li><a class="hover hoverUl" href="#connect" onclick="menuToggle(), shrinkNav(10)">connect</a></li>
+                  </ul>
+
+            </div>
+            <div id="modal" onclick="menuToggle()">
+              </div>
+            <div class="container">
+            <div>
+            </div>
+                <div id="welcome"> 
+                  <div class="section">
+                      <h5>Want a website which inspires trust?</h5>
+
+                      <h5>Want to work with a friendly developer who speaks non-tech fluently?</h5>
+                      
+                      <!--<h5>Have an idea that you want to put into practice with minimal fuss?</h5>-->
+                      
+                      <h5>Let’s talk :  
+                        <a href='mailto:j@climatejourney.com'><i class="fa fa-envelope-o"></i></a>
+                        <a href='tel:(717)229-7171'><i class="fa fa-phone"></i></a></h5>  
+                        
+
+<a id="downArrow" href="#about" onclick='shrinkNav(10)'><i class="fa fa-angle-double-down"></i></a>
+                  </div>
+
+
+                </div>
+                <div id="about">
+                  <div class="section"><h2>About</h2>
+
+
+                    <h3>Hello, I'm Joseph and I build websites.</h3>
+<p>For client sites normally wordpress is my tool of choice.</p>
+
+<h3>Why wordpress?</h3> 
+
+<p>Wordpress is a content management system (CMS). The designer/developer codes up how the site will look (the theme) and behave (plug-ins). Wordpress has an admin portal which allows the site owner to login and update content, add pages and even update wordpress-all without needing to contact the developer or mess with code. </p>
+
+<h3>Wordpress advantages:</h3>
+	<ul>
+	<li>Powers 30% of the web <a href="https://w3techs.com/technologies/overview/content_management/all"> circa Jan 2019.</a> </li>
+<li>Security updates </li>
+<li>Many useful plugins which can help with SEO, content management, forms etc…</li>
+<li>Large developer base, many developers are familiar and can help with existing sites.</li>
+</ul>
+<h3>Couple disadvantages:</h3>
+<ul>
+<li>Can be a little slower. </li>
+<li>Requires updates, which seldom can interfere with the current site.</li>
+</ul>
+</div>
+            </div>
+            <div id="build">
+
+                <div class="section"><h2>Build</h2>
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+ 
+          
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+          
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+              </div>
+
+
+                <div id="connect">
+
+                <div class="section"><h2>Connect</h2>
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+ 
+          
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+          
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+              </div>
+          
+                
+            </div>
+              
+            </div>
+            <footer>
+              <div id="innerFooter">
+              <div><h6>Connect</h6>
+              <p>
+                <a href='https://www.linkedin.com/in/joseph-oxborrow/'><i class="fa fa-linkedin"></i></a>
+                <a href='https://codepen.io/iosepa/'><i class="fa fa-codepen"></i></a>
+                <a href='https://bitbucket.org/jclimate/'><i class="fa fa-bitbucket"></i></a>
+                <a href='mailto:j@climatejourney.com'><i class="fa fa-envelope-o"></i></a>
+                <a href='tel:(717)229-7171'><i class="fa fa-phone"></i></a>
+</p>
+              </div>
+              <div><h6>iosepa.io</h6>
+                <p>Was handcoded by Joseph Oxborrow using vanilla javascript, html and scss.</p>
+
+              </div>
+
+
+              </div>
+            </footer>
+            </div>
+          </body>
+</html>
