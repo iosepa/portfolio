@@ -3,7 +3,7 @@
 debug_to_console("hello");
 
 $name = $_POST["name"];
-$email = "theis@me.com"; //$_POST["email"];
+$email_from = "theis@me.com"; //$_POST["email"];
 $message = "a test"; //$_POST["comment"];
  
 $EmailTo = "jboxborrow@gmx.com";
@@ -15,7 +15,7 @@ $Body .= $name;
 $Body .= "\n";
  
 $Body .= "Email: ";
-$Body .= $email;
+$Body .= $email_from;
 $Body .= "\n";
  
 $Body .= "Message: ";
