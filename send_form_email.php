@@ -1,5 +1,56 @@
 <?php
 
+debug_to_console("hello");
+
+$name = $_POST["name"];
+$email = "theis@me.com"; //$_POST["email"];
+$message = "a test"; //$_POST["comment"];
+ 
+$EmailTo = "jboxborrow@gmx.com";
+$Subject = "iosepa.io message";
+ 
+// prepare email body text
+$Body .= "Name: ";
+$Body .= $name;
+$Body .= "\n";
+ 
+$Body .= "Email: ";
+$Body .= $email;
+$Body .= "\n";
+ 
+$Body .= "Message: ";
+$Body .= $message;
+$Body .= "\n";
+ 
+// send email
+$headers = 'From: '.$email_from."\r\n".
+'Reply-To: '.$email_from."\r\n" .
+'X-Mailer: PHP/' . phpversion();
+$success = @mail($EmailTo, $Subject, $message, $headers); 
+
+
+//$success = mail($EmailTo, $Subject, $message, "From:".$email);
+ 
+// redirect to success page
+if ($success){
+   echo "success";
+}else{
+    echo "invalid";
+}
+ 
+function debug_to_console( $data ) {
+    echo "<script>console.log( 'PHP: " . $data . "' );</script>";
+}
+
+?>
+
+
+
+
+<?php
+/*
+echo("hi there!");
+
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
@@ -28,8 +79,6 @@ if(isset($_POST['email'])) {
         !isset($_POST['comments'])) {
         died('We are sorry, but there appears to be a problem with the form you submitted.');       
     }
- 
-     
  
     $name = $_POST['name']; // required
     $email_from = $_POST['email']; // required
@@ -85,5 +134,5 @@ Thank you for contacting us. We will be in touch with you very soon.
  
 <?php
  
-}
+}*/
 ?>
