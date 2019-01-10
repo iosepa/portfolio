@@ -1,10 +1,6 @@
 window.onload = function(){
 
-
-myForm = document.forms["contactForm"];
-
 //console.log(myForm);
-console.log("here1--");
 /*
 myForm.submit(function(event){
   // cancels the form submission
