@@ -1,64 +1,18 @@
 window.onload = function(){
 
-//console.log(myForm);
-/*
-myForm.submit(function(event){
-  // cancels the form submission
-  console.log("here1");
-  event.preventDefault();
-  ajaxMail();
-});
-*/
-  //let myForm = new FormData(document.querySelector('#contactForm')).entries();
-
-  //for (var pair of myForm) {
-  //  console.log(pair[0]+ ', ' + pair[1]); 
-  //}
-
   document.getElementById('contactForm').addEventListener('submit', (e) => {
-    console.log("here22");
+
+    event.preventDefault();
 
     //const formData = new FormData(e.target);
-
     fetch('send_form_email.php', {
-      method: 'POST',
       headers: {'Content-Type':'application/x-www-form-urlencoded'}, // this line is important, if this content-type is not set it wont work
-      body: "tel=234&email=jo@gm.com&name=adf&comment=adafdf"
+      body: "tel=234&email=jo@gm.com&name=adf&comment=adafdf",
+      method: 'POST'
     })
     .then(res=>console.log(res));
-/*
-    (async () => {
-      const rawResponse = await fetch('send_form_email.php', {
-        method: 'POST',
-        headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/x-www-form-urlencoded'
-        },
-        body: "tel=234&email=jo@gm.com&name=adf&comment=adafdf"
-      });
-      const content = await rawResponse;
-    
-      console.log(content);
-    });*/
+
   }, false);
-
-
-
-/*
-
-    let req = '';
-    for (var pair of myForm) {
-      console.log(pair[0]+ ', ' + pair[1]); 
-    }
-
-
-
-console.log("hello");
-    // Now you can use formData.get('foo'), for example.
-    // Don't forget e.preventDefault() if you want to stop normal form .submission */
-
-//  });
-
 }
 
 function ajaxMail(){

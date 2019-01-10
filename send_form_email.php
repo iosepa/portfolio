@@ -28,6 +28,7 @@ $headers = 'From: '.$email_from."\r\n".
 'X-Mailer: PHP/' . phpversion();
 $success = @mail($EmailTo, $Subject, $message, $headers); 
 
+file_put_contents("php_output.txt", $headers, FILE_APPEND);
 
 //$success = mail($EmailTo, $Subject, $message, "From:".$email);
  
