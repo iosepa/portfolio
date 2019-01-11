@@ -1,5 +1,5 @@
 $break-small: 480px; //this is set seperately in functions.js
-$break-large: 1200px;
+$break-large: 1050px;
 $popoutText: #e5e5e5;
 $smallNavBg: #494141;
 $smallNavFg: $popoutText;
@@ -10,7 +10,7 @@ $regFontSize: 1em;
 $lineHeight: calc(#{$regFontSize}*1.618);
 $headerColor: #4a81c8;
 $navBg: rgba($headerColor, 0.2);
-$imageWidth: 40vw;
+$imageWidth: 50vw;
 
 
 @mixin socialLinks {
@@ -39,15 +39,28 @@ body {
     margin: 0;
     font-size: $regFontSize;
     line-height: $lineHeight;
+    color: #333;
   }
 
 h2 {
   font-family: $firstFont;
-  margin: 0 auto;
+  margin: 10px auto;
   text-align: center;
     font-size: 2em;
     line-height: 1.45em;
 }  
+
+h4 {
+  text-align: center;
+  font-size: 1.5em;
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  a:hover {
+    color: $headerColor;
+  }
+}
 
 
   header {
@@ -127,11 +140,13 @@ h2 {
   
 
   
-  ul {
-    list-style: none;
-  }
+
   
+#menuSide, #menu {
+
   li {
+    list-style: none;
+
     margin: 0 0.2em;
    //transition: 0.5s;
      a {
@@ -164,8 +179,8 @@ h2 {
           }
         }
 
-        @media (min-width: $break-small){
-
+        @media (min-width: $break-large){
+      
         &:hover {
           cursor: pointer;
           a {
@@ -178,7 +193,9 @@ h2 {
         }
       }
   } //https://codepen.io/mxttsco/pen/KgodYm?editors=1000
-  
+}
+
+
   #menu {
     display: flex;
     justify-content: space-between;
@@ -276,11 +293,9 @@ h2 {
       color: $popoutText;
       &.hoverUl {
         &:before {
-          left: calc(50%);
           background-color: $headerColor;
         }
         &:after {
-          right: calc(50%);
           background-color: $headerColor;
         }
       }
@@ -331,13 +346,31 @@ h2 {
     h5 {
       top: 70vh;
       font-weight: normal;
-      font-size: 1.2em;
+      font-size: 1.5em;
       position: relative;
+      @media screen and (max-width: $break-small){
+        top: 50vh;
+      }
       a {
         position: relative;
         top: 5px;
         @include socialLinks();
       }
+
+
+      }
+      #firstQuestion  {
+        @media screen and (max-width: $break-small){
+          top: 14vh;
+          font-size: 6vw;
+        }
+      } 
+        #secondQuestion  {
+          font-size: 1.3em;
+          @media screen and (max-width: $break-small){
+            top: 11vh;
+            font-size: 5vw;
+          }   
     }
     #downArrow {
       font-size: 3em;
@@ -356,7 +389,6 @@ h2 {
   }  
 
 .section {
-  max-width: 1000px;
   margin: 0 auto;
   min-height: 100vh;
 }
@@ -364,17 +396,39 @@ h2 {
 
 #build {
 
+  h5 {
+    font-size: 1.2em;
+  }
+
+  .portImg {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    @media screen and (max-width: 400px) {
+      width: 300px;
+      margin: 0 auto;
+    }
+  }
+  
+  figcaption {
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: 500;
+    margin-top: -20px;
+  }
+
   img {
     
     width: $imageWidth;
     border-radius: 8px;
     border: 3px solid rgb(19, 16, 16);
     padding: 5px;
-
+    margin: 20px auto;
+    transition: all 0.5s ease;
 
 
     @media screen and (min-width: $break-large){
-      width: 400px;
+      width: 500px;
     }
     @media screen and (max-width: $break-small){
       width: 300px;
@@ -383,15 +437,79 @@ h2 {
 
 
   }
+
+  img:hover {
+    background: linear-gradient(135deg, #bfd3ec, #e3c6b5);
+    //transform: rotate(-0.2deg);
+  }
+
   .mobile {
     width: calc(#{$imageWidth}/2);
+    @media screen and (min-width: $break-large){
+      width: 250px;
+    }
+    @media screen and (max-width: $break-small){
+      width: 150px;
+    }
+
   }
+
+  .quotes {
+    font-size: 1.5em;
+    padding: 6px;
+    background: lighten($headerColor, 25);
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .quote {
+    margin:10px;
+    padding: 10px;
+    color:black;
+    font-size: 1em;
+  }
+  
+  .author {
+    margin:10px;
+    font-size: 2em;
+    position: relative;
+    right: 28%;
+    text-align: right;
+    font-size: 1.6em;
+    @media screen and (max-width: $break-small) {
+      right: 31%;
+    }
+
+  }
+  
+  .speech-bubble {
+    position: relative;
+    background: lighten($headerColor, 30);
+    border-radius: .4em;
+    margin: 10px;
+  }
+  
+  .speech-bubble:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 75%;
+    width: 0;
+    height: 0;
+    border: 1.9em solid transparent;
+    border-top-color: lighten($headerColor, 30);
+    border-left: 0;
+    border-bottom: 0;
+    margin-bottom: -1.8em;
+    margin-left: -1.062em;
+  }
+
 }
 
-#connect {
+#contact {
   width: 100%;
   background: linear-gradient(135deg,#00C4FF,#4a81c8);
-
+  margin-top: 30px;
 
 }
 
@@ -432,11 +550,15 @@ h2 {
     margin:0 auto;
     position:relative;
     text-align: center;
+    @media screen and (max-width: $break-small) {
+      width: 300px;
+    }
+
   }
   
   
   #contactForm {
-    background: #CCC; 
+    background: #F9F9F9; 
     padding:25px;
     margin:50px 0;
   
@@ -456,11 +578,11 @@ h2 {
       max-width:100%;
       border:1px solid #CCC;
       background:#FFF;
-      margin:5px;
+      margin:10px 5px;
       padding:10px;
       border-radius: 10px;
       font-family: $bodyFont;
-      font-size: 1em;
+      font-size: 0.9em;
     }
   
     input:hover, textarea:hover {
@@ -480,10 +602,12 @@ h2 {
       background: #00C4FF;
       padding:10px;
       border-radius: 10px;
+      font-size: 0.9em;
     }
   
     button:hover {
       background:#09C;
+      color: white;
       transition: #4a81c8 0.3s ease-in-out;
     }
   

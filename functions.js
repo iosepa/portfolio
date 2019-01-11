@@ -1,5 +1,19 @@
 window.onload = function(){
 
+  let deviceAgent = navigator.userAgent.toLowerCase();
+
+let isTouchDevice = 
+(deviceAgent.match(/(iphone|ipod|ipad)/) ||
+deviceAgent.match(/(android)/)  || 
+deviceAgent.match(/(iemobile)/) || 
+deviceAgent.match(/iphone/i) || 
+deviceAgent.match(/ipad/i) || 
+deviceAgent.match(/ipod/i) || 
+deviceAgent.match(/blackberry/i) || 
+deviceAgent.match(/bada/i));
+
+//alert(isTouchDevice + " -touch?");
+
   document.getElementById('contactForm').addEventListener('submit', (e) => {
 
     event.preventDefault();
@@ -17,8 +31,6 @@ window.onload = function(){
     } 
 
     postData = postData.replace(/\s/g,'+');
-    console.log(postData + " adfadsadfa");
-
 
     fetch('send_form_email.php', {
       headers: {'Content-Type':'application/x-www-form-urlencoded'}, 

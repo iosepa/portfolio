@@ -6,14 +6,24 @@ body {
   font-family: "Open Sans";
   margin: 0;
   font-size: 1em;
-  line-height: calc(1em*1.618); }
+  line-height: calc(1em*1.618);
+  color: #333; }
 
 h2 {
   font-family: "Exo";
-  margin: 0 auto;
+  margin: 10px auto;
   text-align: center;
   font-size: 2em;
   line-height: 1.45em; }
+
+h4 {
+  text-align: center;
+  font-size: 1.5em; }
+  h4 a {
+    text-decoration: none;
+    color: black; }
+  h4 a:hover {
+    color: #4a81c8; }
 
 header {
   font-family: "Exo";
@@ -76,16 +86,14 @@ header {
     display: none;
     transition: 1s; }
 
-ul {
-  list-style: none; }
-
-li {
+#menuSide li, #menu li {
+  list-style: none;
   margin: 0 0.2em; }
-  li a {
+  #menuSide li a, #menu li a {
     text-decoration: none;
     color: black;
     position: relative; }
-    li a:before, li a:after {
+    #menuSide li a:before, #menuSide li a:after, #menu li a:before, #menu li a:after {
       content: "";
       position: absolute;
       bottom: 0px;
@@ -94,16 +102,16 @@ li {
       transition: all 0.2s ease-in-out;
       transition-duration: 0.5s;
       opacity: 0.5; }
-    li a.hoverUl:before {
+    #menuSide li a.hoverUl:before, #menu li a.hoverUl:before {
       left: calc(50%);
       background-color: black; }
-    li a.hoverUl:after {
+    #menuSide li a.hoverUl:after, #menu li a.hoverUl:after {
       right: calc(50%);
       background-color: black; }
-  @media (min-width: 480px) {
-    li:hover {
+  @media (min-width: 1050px) {
+    #menuSide li:hover, #menu li:hover {
       cursor: pointer; }
-      li:hover a:before, li:hover a:after {
+      #menuSide li:hover a:before, #menuSide li:hover a:after, #menu li:hover a:before, #menu li:hover a:after {
         width: 50%;
         opacity: 1; } }
 
@@ -190,10 +198,8 @@ li {
   #menuSide li a {
     color: #e5e5e5; }
     #menuSide li a.hoverUl:before {
-      left: calc(50%);
       background-color: #4a81c8; }
     #menuSide li a.hoverUl:after {
-      right: calc(50%);
       background-color: #4a81c8; }
 
 #modal {
@@ -231,8 +237,11 @@ li {
   #welcome h5 {
     top: 70vh;
     font-weight: normal;
-    font-size: 1.2em;
+    font-size: 1.5em;
     position: relative; }
+    @media screen and (max-width: 480px) {
+      #welcome h5 {
+        top: 50vh; } }
     #welcome h5 a {
       position: relative;
       top: 5px;
@@ -245,6 +254,16 @@ li {
         color: #4a81c8; }
       #welcome h5 a .icon-background {
         color: #494141; }
+  @media screen and (max-width: 480px) {
+    #welcome #firstQuestion {
+      top: 14vh;
+      font-size: 6vw; } }
+  #welcome #secondQuestion {
+    font-size: 1.3em; }
+    @media screen and (max-width: 480px) {
+      #welcome #secondQuestion {
+        top: 11vh;
+        font-size: 5vw; } }
   #welcome #downArrow {
     font-size: 3em;
     text-decoration: none;
@@ -259,27 +278,91 @@ li {
     color: #4a81c8; }
 
 .section {
-  max-width: 1000px;
   margin: 0 auto;
   min-height: 100vh; }
 
+#build h5 {
+  font-size: 1.2em; }
+#build .portImg {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; }
+  @media screen and (max-width: 400px) {
+    #build .portImg {
+      width: 300px;
+      margin: 0 auto; } }
+#build figcaption {
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: 500;
+  margin-top: -20px; }
 #build img {
-  width: 40vw;
+  width: 50vw;
   border-radius: 8px;
   border: 3px solid #131010;
-  padding: 5px; }
-  @media screen and (min-width: 1200px) {
+  padding: 5px;
+  margin: 20px auto;
+  transition: all 0.5s ease; }
+  @media screen and (min-width: 1050px) {
     #build img {
-      width: 400px; } }
+      width: 500px; } }
   @media screen and (max-width: 480px) {
     #build img {
       width: 300px; } }
+#build img:hover {
+  background: linear-gradient(135deg, #bfd3ec, #e3c6b5); }
 #build .mobile {
-  width: calc(40vw/2); }
+  width: calc(50vw/2); }
+  @media screen and (min-width: 1050px) {
+    #build .mobile {
+      width: 250px; } }
+  @media screen and (max-width: 480px) {
+    #build .mobile {
+      width: 150px; } }
+#build .quotes {
+  font-size: 1.5em;
+  padding: 6px;
+  background: #acc5e6;
+  text-align: center;
+  margin-bottom: 10px; }
+#build .quote {
+  margin: 10px;
+  padding: 10px;
+  color: black;
+  font-size: 1em; }
+#build .author {
+  margin: 10px;
+  font-size: 2em;
+  position: relative;
+  right: 28%;
+  text-align: right;
+  font-size: 1.6em; }
+  @media screen and (max-width: 480px) {
+    #build .author {
+      right: 31%; } }
+#build .speech-bubble {
+  position: relative;
+  background: #bfd3ec;
+  border-radius: .4em;
+  margin: 10px; }
+#build .speech-bubble:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 75%;
+  width: 0;
+  height: 0;
+  border: 1.9em solid transparent;
+  border-top-color: #bfd3ec;
+  border-left: 0;
+  border-bottom: 0;
+  margin-bottom: -1.8em;
+  margin-left: -1.062em; }
 
-#connect {
+#contact {
   width: 100%;
-  background: linear-gradient(135deg, #00C4FF, #4a81c8); }
+  background: linear-gradient(135deg, #00C4FF, #4a81c8);
+  margin-top: 30px; }
 
 footer {
   width: 100%;
@@ -317,9 +400,12 @@ footer {
   margin: 0 auto;
   position: relative;
   text-align: center; }
+  @media screen and (max-width: 480px) {
+    .container {
+      width: 300px; } }
 
 #contactForm {
-  background: #CCC;
+  background: #F9F9F9;
   padding: 25px;
   margin: 50px 0; }
   #contactForm p {
@@ -335,11 +421,11 @@ footer {
     max-width: 100%;
     border: 1px solid #CCC;
     background: #FFF;
-    margin: 5px;
+    margin: 10px 5px;
     padding: 10px;
     border-radius: 10px;
     font-family: "Open Sans";
-    font-size: 1em; }
+    font-size: 0.9em; }
   #contactForm input:hover, #contactForm textarea:hover {
     transition: border-color 0.3s ease-in-out;
     border: 1px solid #AAA; }
@@ -352,9 +438,11 @@ footer {
     border: none;
     background: #00C4FF;
     padding: 10px;
-    border-radius: 10px; }
+    border-radius: 10px;
+    font-size: 0.9em; }
   #contactForm button:hover {
     background: #09C;
+    color: white;
     transition: #4a81c8 0.3s ease-in-out; }
   #contactForm button:active {
     box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5); }
