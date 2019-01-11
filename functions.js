@@ -17,6 +17,8 @@ window.onload = function(){
     } 
 
     postData = postData.replace(/\s/g,'+');
+    console.log(postData + " adfadsadfa");
+
 
     fetch('send_form_email.php', {
       headers: {'Content-Type':'application/x-www-form-urlencoded'}, 
@@ -24,6 +26,8 @@ window.onload = function(){
       method: 'POST'
     })
     .then(function(response){ return response.text()}).then(text=>document.getElementById('formResponse').innerHTML+=text);
+
+    document.getElementById('contactForm').reset();
 
     document.getElementById('formResponse').innerHTML = "Thank you, " + custName + ".";
 

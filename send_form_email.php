@@ -2,7 +2,7 @@
 
 $name = urldecode($_POST["name"]);
 $email_from = filter_var($_POST["email"], FILTER_SANITIZE_EMAIL);
-$message = urldecode($_POST["comment"]);
+$message = urldecode($_POST["comments"]);
  
 $EmailTo = "jboxborrow@gmx.com";
 $Subject = "iosepa.io message";
@@ -25,6 +25,8 @@ $headers = 'From: '.$email_from."\r\n".
 'Reply-To: '.$email_from."\r\n" .
 'X-Mailer: PHP/' . phpversion();
 $success = @mail($EmailTo, $Subject, $message, $headers); 
+
+//file_put_contents("php_output.txt", $name . " " .$headers ." ". $message, FILE_APPEND);
 
 // redirect to success page
 if ($success){
