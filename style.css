@@ -1,10 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Exo|Open+Sans");
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600);
 html {
   scroll-behavior: smooth; }
 
 body {
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   margin: 0;
   font-size: 1em;
   line-height: calc(1em*1.618); }
@@ -312,90 +311,57 @@ footer {
   #innerFooter p {
     font-size: 0.8em; }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  text-rendering: optimizeLegibility; }
-
 body {
-  font-family: "Open Sans", Helvetica, Arial, sans-serif;
-  font-weight: 300;
-  font-size: 12px;
-  line-height: 30px;
-  color: #777;
-  background: #0CF; }
+  background: linear-gradient(135deg, #00C4FF, #4a81c8); }
 
 .container {
   max-width: 400px;
   width: 100%;
   margin: 0 auto;
   position: relative;
-  border-radius: 10px; }
-
-#contactForm input[type="text"], #contactForm input[type="email"], #contactForm input[type="tel"], #contactForm input[type="url"], #contactForm textarea, #contactForm button[type="submit"] {
-  font: 400 12px/16px "Open Sans", Helvetica, Arial, sans-serif; }
+  text-align: center; }
 
 #contactForm {
+  background: #CCC;
   padding: 25px;
   margin: 50px 0; }
-
-#contactForm h3 {
-  color: #F96;
-  display: block;
-  font-size: 30px;
-  font-weight: 400; }
-
-#contactForm h4 {
-  margin: 5px 0 15px;
-  display: block;
-  font-size: 13px; }
-
-fieldset {
-  border: medium none !important;
-  margin: 0 0 10px;
-  min-width: 100%;
-  padding: 0;
-  width: 100%; }
-
-#contactForm input[type="text"], #contactForm input[type="email"], #contactForm input[type="tel"], #contactForm input[type="url"], #contactForm textarea {
-  width: 100%;
-  border: 1px solid #CCC;
-  background: #FFF;
-  margin: 0 0 5px;
-  padding: 10px;
-  border-radius: 10px; }
-
-#contactForm input[type="text"]:hover, #contactForm input[type="email"]:hover, #contactForm input[type="tel"]:hover, #contactForm input[type="url"]:hover, #contactForm textarea:hover {
-  transition: border-color 0.3s ease-in-out;
-  border: 1px solid #AAA; }
-
-#contactForm textarea {
-  height: 100px;
-  max-width: 100%;
-  border-radius: 10px;
-  resize: none; }
-
-#contactForm button[type="submit"] {
-  cursor: pointer;
-  width: 100%;
-  border: none;
-  background: #0CF;
-  color: #FFF;
-  margin: 0 0 5px;
-  padding: 10px;
-  font-size: 15px;
-  border-radius: 10px; }
-
-#contactForm button[type="submit"]:hover {
-  background: #09C;
-  transition: background-color 0.3s ease-in-out; }
-
-#contactForm button[type="submit"]:active {
-  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5); }
-
-#contactForm input:focus, #contactForm textarea:focus {
-  outline: 0;
-  border: 1px solid #999; }
+  #contactForm p {
+    font-size: 2em; }
+  #contactForm h4 {
+    margin: 5px 0 15px;
+    display: block;
+    font-size: 1.5em;
+    text-align: center;
+    color: #4d4d4d; }
+  #contactForm input, #contactForm textarea {
+    width: calc(100% - 32px);
+    max-width: 100%;
+    border: 1px solid #CCC;
+    background: #FFF;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 10px;
+    font-family: "Exo"; }
+  #contactForm input:hover, #contactForm textarea:hover {
+    transition: border-color 0.3s ease-in-out;
+    border: 1px solid #AAA; }
+  #contactForm textarea {
+    height: 100px;
+    resize: none; }
+  #contactForm button[type="submit"] {
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    background: #00C4FF;
+    padding: 10px;
+    border-radius: 10px; }
+  #contactForm button:hover {
+    background: #09C;
+    transition: #4a81c8 0.3s ease-in-out; }
+  #contactForm button:active {
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5); }
+  #contactForm input:focus, #contactForm textarea:focus {
+    outline: 0;
+    border: 1px solid #999; }
 
 /*# sourceMappingURL=style.css.map */

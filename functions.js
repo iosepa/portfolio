@@ -4,30 +4,30 @@ window.onload = function(){
 
     event.preventDefault();
 
-    //const formData = new FormData(e.target);
+    let elements = document.getElementById('contactForm').elements;
+    let postData = "";
+    let custName = '';
+
+    for (let i=0; i<elements.length; i++){
+      let field = elements.item(i);
+      if(field.name == 'name'){
+        custName = field.value;
+      }
+      postData += field.name + "=" + field.value + "&";
+    } 
+
+    postData = postData.replace(/\s/g,'+');
+
     fetch('send_form_email.php', {
-      headers: {'Content-Type':'application/x-www-form-urlencoded'}, // this line is important, if this content-type is not set it wont work
-      body: "tel=234&email=jo@gm.com&name=adf&comment=adafdf",
+      headers: {'Content-Type':'application/x-www-form-urlencoded'}, 
+      body: postData,
       method: 'POST'
     })
-    .then(res=>console.log(res));
+    .then(function(response){ return response.text()}).then(text=>document.getElementById('formResponse').innerHTML+=text);
+
+    document.getElementById('formResponse').innerHTML = "Thank you, " + custName + ".";
 
   }, false);
-}
-
-function ajaxMail(){
-  console.log("here3");
-
-  let contactData = new FormData(document.querySelector('#contactForm'));
-  console.log(contactData);
-
-
-  fetch('send_form_email.php', {
-    method: 'POST',
-    headers: {'Content-Type':'application/x-www-form-urlencoded'}, // this line is important, if this content-type is not set it wont work
-    body: 'contactData'
-  });
-
 }
 
 function shrinkNav(scrollPos) {
