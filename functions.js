@@ -1,6 +1,10 @@
 window.onload = function(){
   
-  autoType("greeting",140, "Hello. Would you like a beautiful website?");
+  autoType("greeting",95, "Hello. Would you like a beautiful website?");
+
+  setTimeout(function(){
+    document.getElementById('callToAction').style.opacity = "1";
+  }, 4000);
 
   let deviceAgent = navigator.userAgent.toLowerCase();
 
@@ -42,7 +46,6 @@ deviceAgent.match(/bada/i));
     .then(function(response){ return response.text()}).then(text=>document.getElementById('formResponse').innerHTML+=text);
 
     document.getElementById('contactForm').reset();
-
     document.getElementById('formResponse').innerHTML = "Thank you, " + custName + ".";
 
   }, false);
