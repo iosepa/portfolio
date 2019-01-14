@@ -252,9 +252,28 @@ header {
     display: block;
     font-size: 1em;
     top: 35vh;
-    width: 100px;
+    width: 150px;
     text-align: center;
     margin: 0 auto; }
+    @media screen and (max-width: 480px) {
+      #welcome #greeting {
+        width: 100px; } }
+  #welcome #greeting::after {
+    content: "";
+    position: relative;
+    display: inline-block;
+    height: 1em;
+    right: -5px;
+    width: 2px;
+    /* Change colour of Cursor Here */
+    background-color: white;
+    z-index: 1;
+    animation: flash 0.5s none infinite alternate; }
+@keyframes flash {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
   #welcome #contactLinks {
     top: 67vh;
     display: flex;
@@ -281,6 +300,9 @@ header {
   margin: 0 auto;
   min-height: 100vh;
   max-width: 1000px; }
+  @media screen and (max-width: 1000px) {
+    .section {
+      max-width: 94%; } }
 
 #about {
   width: 100%;

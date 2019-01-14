@@ -1,6 +1,6 @@
 window.onload = function(){
   
-  autoType("greeting",100, "Hello. Would you like a beautiful website?");
+  autoType("greeting",140, "Hello. Would you like a beautiful website?");
 
   let deviceAgent = navigator.userAgent.toLowerCase();
 
