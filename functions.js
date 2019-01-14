@@ -1,4 +1,6 @@
 window.onload = function(){
+  
+  autoType("greeting",100, "Hello. Would you like a beautiful website?");
 
   let deviceAgent = navigator.userAgent.toLowerCase();
 
@@ -114,3 +116,20 @@ function menuToggle() {
 }
 
 
+function autoType(elementID, typingSpeed, text){
+  let thhis = document.getElementById(elementID);
+  let amntOfChars = text.length;
+  let newString = "";
+  
+  setTimeout(function(){
+    thhis.style.opacity = "1";
+    thhis.innerHTML = "";
+    for(let i = 0; i < amntOfChars; i++){
+      (function(i,char){
+        setTimeout(function() {        
+          thhis.innerHTML += char;
+        },i*typingSpeed)
+      })(i+1,text[i]);
+    }
+  },200);
+}

@@ -18,7 +18,7 @@
               <div class="title"><a href="#" onclick="shrinkNav(0)">io<span id="subTitle">sepa.io</span></a></div>
                 <ul id="menu" onclick="shrinkNav(10)">
                   <li><a class="hover hoverUl nonTouch" href="#about">about</a></li>
-                  <li><a class="hover hoverUl" href="#build">build</a></li>
+                  <li><a class="hover hoverUl" href="#build">portfolio</a></li>
                   <li><a class="hover hoverUl" href="#contact">contact</a></li>
                 </ul>
               <div id="menu-toggle" class="menu-toggle toggleBox" onclick="menuToggle()">
@@ -31,7 +31,7 @@
             <div id="popout" class="notPopped">
                 <ul id="menuSide" onclick="menuToggle(), shrinkNav(10)">
                     <li><a class="hover hoverUl" href="#about">about</a></li>
-                    <li><a class="hover hoverUl" href="#build">build</a></li>
+                    <li><a class="hover hoverUl" href="#build">portfolio</a></li>
                     <li><a class="hover hoverUl" href="#contact">contact</a></li>
                   </ul>
 
@@ -41,18 +41,14 @@
             <div id="container">
             <div>
             </div>
-                <div id="welcome"> 
+                <div id="welcome" title="Hello. Would you like a beautiful website?"> 
                   <div class="section">
-                      <h5 id="firstQuestion">I'm Joseph.</h5>
 
-                      <h5 id="secondQuestion">I build websites.</h5>
-                      
-                      <!--<h5>Have an idea that you want to put into practice with minimal fuss?</h5>-->
-                      
-                      <h5>Let’s talk :  
+                      <h5 id="contactLinks">
                         <a href='mailto:j@climatejourney.com'><i class="fa fa-envelope-o"></i></a>
                         <a href='tel:(717)229-7171'><i class="fa fa-phone"></i></a></h5>  
-                        
+                        <h5 id="greeting"></h5>
+
 
 <a id="downArrow" href="#about" onclick='shrinkNav(10)'><i class="fa fa-angle-double-down"></i></a>
                   </div>
@@ -81,14 +77,15 @@
                     <li>Can be a little slower. </li>
                     <li>CMS is developed and updated by a third party.</li>
                     </ul>
+
                     </div>
               </div>
             <div id="build">
 
-                <div class="section"><h2>Build</h2>
+                <div class="section"><h2>Portfolio</h2>
 
-
-                  <h4><a href="http://uplyftwellness.com">Uplyft Wellness</a></h4>
+<p>Had my first web development job in 2007. Here are a couple wordpress sites I've built recently.</p>
+                  <h4 id="uplyft"><a href="http://uplyftwellness.com">Uplyft Wellness</a></h4>
                   
 <h5>Designed logo and website.</h5>
 <p><b>Logo:</b> convey a feeling of wholeness and health.</p>
@@ -109,7 +106,7 @@
                       </div>
                     </hgroup>
                         <h6 class="author">Isi</h6>
-                  <h4><a href="http://swan.climatejourney.com">Southern Women's Aid Metwork (SWAN)</a></h4>
+                  <h4 id="swan"><a href="http://swan.climatejourney.com">Southern Women's Aid Metwork (SWAN)</a></h4>
                   <h5>Designed website.</h5>
                   <p><b>Website: </b>Wordpress site with custom theme. This is a very cool group of ladies working to make the world a better place. I met Saiqa in Greece working with a refugee camp. Their organization needed an online presence, happy to be a part of it.</p>
 
@@ -143,8 +140,8 @@
                         <input placeholder="Name" type="text" name="name" tabindex="1" required>
                         <input placeholder="Email Address" type="email" name="email" tabindex="2" required>
                         <input placeholder="Phone Number" type="tel" name="tel" tabindex="3">
-                        <textarea placeholder="Message Here..." name="comments" tabindex="4" required></textarea>
-                        <button name="submitBtn" id="contact-submit" type="submit" data-submit="...Sending">Submit</button>
+                        <textarea placeholder="Message" name="comments" tabindex="4" required></textarea>
+                        <button name="submitBtn" id="contact-submit" type="submit" data-submit="...Sending">Contact</button>
                         <p id='formResponse'></p>
                     </form>
                   </div>
@@ -166,7 +163,7 @@
 </p>
               </div>
               <div><h6>iosepa.io</h6>
-                <p>Was handcoded by Joseph Oxborrow using vanilla javascript, php, html and scss.</p>
+                <p>Was designed and handcoded by Joseph Oxborrow using vanilla javascript, php, html and scss.</p>
 
               </div>
 

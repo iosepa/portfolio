@@ -344,39 +344,41 @@ h4 {
       margin: 0 auto;
     }
     h5 {
-      top: 70vh;
       font-weight: normal;
-      font-size: 1.5em;
+      font-size: 0.7em;
       position: relative;
-      @media screen and (max-width: $break-small){
-        top: 50vh;
-      }
+      
       a {
-        position: relative;
-        top: 5px;
         @include socialLinks();
       }
 
 
       }
-      #firstQuestion  {
-        @media screen and (max-width: $break-small){
-          top: 14vh;
-          font-size: 6vw;
-        }
-      } 
-        #secondQuestion  {
-          font-size: 1.3em;
-          @media screen and (max-width: $break-small){
-            top: 11vh;
-            font-size: 5vw;
-          }   
-    }
+      #greeting {
+        display: block;
+        font-size: 1em;
+        top: 35vh;
+        width: 100px;
+        text-align: center;
+        margin: 0 auto;
+
+      }
+      #contactLinks {
+        //position: absolute;
+        top: 67vh;
+        display: flex;
+        justify-content: space-between;
+        width: 15vw;
+        margin: 0 auto;
+        justify-content: space-between;
+        max-width: 150px;
+        min-width: 100px;
+      }
     #downArrow {
       font-size: 3em;
       text-decoration: none;
       position: absolute;
-      top: 92vh;
+      top: 80vh;
       color: $smallNavFg;
       right: 20vw;
       @media screen and (max-width: $break-small){
@@ -394,11 +396,39 @@ h4 {
   max-width: 1000px;
 }
 
+#about {
+  width: 100%;
+  background: linear-gradient(135deg, white, #4a81c8);
+  img {
+    width: 150px;
+    position: relative;
+    left: 70%;
+    top: 8vh;
+    //<img id="headshot" alt="headshot of Joseph looking up" src="media/headshot.png"></img>
+
+  }
+
+
+}
 
 #build {
+  width: 100%;
+  //background: linear-gradient(135deg, #bfd3ec, #e3c6b5);
   
   h5 {
     font-size: 1.2em;
+  }
+  #uplyft {
+    background-color: #943ea0;
+    padding: 40px;
+  }
+  #swan {
+    background-color: #043a95;
+    padding: 40px;
+  }
+  h4 a {
+    color: white;
+    font-weight: 300;
   }
 
   .portImg {
