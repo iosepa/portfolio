@@ -357,7 +357,7 @@ h4 {
       #greeting {
         display: block;
         font-size: 1em;
-        top: 31vh;
+        top: 18vh;
         width: 150px;
         text-align: center;
         margin: 0 auto;
@@ -399,16 +399,17 @@ h4 {
         background-color: complement($headerColor);
 
         position: relative;
-    //    border: 1px solid black;
         border-radius: 5px;
         display: block;
         opacity: 0;
         transition: 1s;
         &:hover {
-         // background-color: darken(complement($headerColor), 15);
-//          border: 1px solid white;
           transition: 0.5s;
           color: white;
+          background-color: darken(complement($headerColor), 5);          
+        }
+        @media screen and (min-width: $break-large){
+          top: 54vh;
         }
         
       }
@@ -423,6 +424,9 @@ h4 {
         justify-content: space-between;
         max-width: 150px;
         min-width: 100px;
+        @media screen and (min-width: $break-large){
+          top: 71vh;
+        }
       }
     #downArrow {
       font-size: 3em;

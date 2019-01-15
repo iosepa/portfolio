@@ -251,7 +251,7 @@ header {
   #welcome #greeting {
     display: block;
     font-size: 1em;
-    top: 31vh;
+    top: 18vh;
     width: 150px;
     text-align: center;
     margin: 0 auto; }
@@ -290,7 +290,11 @@ header {
     transition: 1s; }
     #welcome #callToAction:hover {
       transition: 0.5s;
-      color: white; }
+      color: white;
+      background-color: #bf853a; }
+    @media screen and (min-width: 1050px) {
+      #welcome #callToAction {
+        top: 54vh; } }
   #welcome #contactLinks {
     top: 67vh;
     display: flex;
@@ -300,6 +304,9 @@ header {
     justify-content: space-between;
     max-width: 150px;
     min-width: 100px; }
+    @media screen and (min-width: 1050px) {
+      #welcome #contactLinks {
+        top: 71vh; } }
   #welcome #downArrow {
     font-size: 3em;
     text-decoration: none;
