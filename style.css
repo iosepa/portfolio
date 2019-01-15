@@ -194,7 +194,10 @@ header {
   transition: 0.3s; }
 
 #menuSide {
-  font-family: "Exo"; }
+  font-family: "Exo";
+  font-size: 1.2em;
+  line-height: 2em;
+  font-weight: 200; }
   #menuSide li a {
     color: #e5e5e5; }
     #menuSide li a.hoverUl:before {
@@ -334,8 +337,11 @@ header {
   #about img {
     width: 150px;
     position: relative;
-    left: 70%;
-    top: 8vh; }
+    left: 80%;
+    top: -10vh; }
+    @media screen and (max-width: 480px) {
+      #about img {
+        display: none; } }
 
 #build {
   width: 100%; }

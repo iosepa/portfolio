@@ -288,6 +288,9 @@ h4 {
 
 #menuSide {
   font-family: $firstFont;
+  font-size: 1.2em;
+  line-height: 2em;
+  font-weight: 200;
   li {
     a {
       color: $popoutText;
@@ -461,12 +464,13 @@ h4 {
   img {
     width: 150px;
     position: relative;
-    left: 70%;
-    top: 8vh;
+    left: 80%;
+    top: -10vh;
     //<img id="headshot" alt="headshot of Joseph looking up" src="media/headshot.png"></img>
-
+    @media screen and (max-width: $break-small){
+      display: none;
+    }
   }
-
 
 }
 
