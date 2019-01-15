@@ -6,19 +6,9 @@ window.onload = function(){
     document.getElementById('callToAction').style.opacity = "1";
   }, 4000);
 
-  let deviceAgent = navigator.userAgent.toLowerCase();
+  if (5 < window.scrollY) shrinkNav(window.scrollY);
 
-let isTouchDevice = 
-(deviceAgent.match(/(iphone|ipod|ipad)/) ||
-deviceAgent.match(/(android)/)  || 
-deviceAgent.match(/(iemobile)/) || 
-deviceAgent.match(/iphone/i) || 
-deviceAgent.match(/ipad/i) || 
-deviceAgent.match(/ipod/i) || 
-deviceAgent.match(/blackberry/i) || 
-deviceAgent.match(/bada/i));
-
-//alert(isTouchDevice + " -touch?");
+  window.onscroll = function() { shrinkNav(window.scrollY); };
 
   document.getElementById('contactForm').addEventListener('submit', (e) => {
 
@@ -49,18 +39,24 @@ deviceAgent.match(/bada/i));
     document.getElementById('formResponse').innerHTML = "Thank you, " + custName + ".";
 
   }, false);
+
+
 }
 
 function shrinkNav(scrollPos) {
+
+ 
 
   let headerEl = document.getElementById("nav");
   let menu = document.getElementById("menu");
   let toggle = document.getElementById("menu-toggle");
 
+ 
+
   if (document.getElementById("popout").classList.contains("popped")) menuToggle(); //pull the popout in
 
   if ((5 < scrollPos && !headerEl.classList.contains("smallNav")) || 
-      (5 > scrollPos && headerEl.classList.contains("smallNav"))){ 
+      (5 >= scrollPos && headerEl.classList.contains("smallNav"))){ 
     toggleNav();
   }
 
@@ -87,28 +83,11 @@ function resizeFun() {
   }
 }
 
-(function() {
-    var supportOffset = window.pageYOffset !== undefined,
-      lastKnownPos = 0,
-      ticking = false,
-      scrollDir,
-      currYPos;
+function scrollWatch(){
 
-    window.addEventListener('wheel', function(e) {
-      currYPos = supportOffset ? window.pageYOffset : document.body.scrollTop;
-      scrollDir = lastKnownPos > currYPos ? 'up' : 'down';
-      lastKnownPos = currYPos;
-  
-      if (!ticking) {
-        window.requestAnimationFrame(function() {
-          shrinkNav(lastKnownPos);
-          ticking = false;
-        });
-      }
-      ticking = true;
-    });
-  })();//Jesse Dupuy - https://stackoverflow.com/questions/8189840/get-mouse-wheel-events-in-jquery/22518932#2251893
-
+}
+/*
+*/
 var loaded = false;
 
 function menuToggle() {
