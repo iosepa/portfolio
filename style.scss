@@ -12,7 +12,6 @@ $headerColor: #4a81c8;
 $navBg: rgba($headerColor, 0.2);
 $imageWidth: 50vw;
 
-
 @mixin socialLinks {
   font-size: 1.8em;
   margin: 0.2em;
@@ -612,7 +611,6 @@ h6 {
 
   img:hover {
     background: linear-gradient(135deg, #bfd3ec, #e3c6b5);
-    //transform: rotate(-0.2deg);
   }
 
   .mobile {
