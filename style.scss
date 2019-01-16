@@ -112,7 +112,7 @@ h4 {
       transition: 0.7s;
 
     }
-    @media screen and (max-width: $break-small) {
+    @media screen and (max-width: $break-small), screen and (max-height: $break-small) {
       height: 60px;
       background-color: $navBg;
       line-height: 40px; 
@@ -192,6 +192,12 @@ h4 {
           }
         }
       }
+      @media screen and (max-width: $break-small), screen and (max-height: $break-small) {
+        color: $popoutText;
+        margin: 10px;
+      
+      }
+
   } //https://codepen.io/mxttsco/pen/KgodYm?editors=1000
 }
 
@@ -346,6 +352,25 @@ h4 {
       width: 100px;
       margin: 0 auto;
     }
+
+    #smallPhone {
+      background-color: black;
+      color: $popoutText;
+      width: 15%;
+      height:35vh;
+      border-radius: 5vh;
+      margin: 0 auto;
+      position: relative;
+      top: 55vh;
+      transform: translateY(-50%);
+      min-height: 250px;
+      min-width: 120px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+
+
     h5 {
       font-weight: normal;
       font-size: 0.7em;
@@ -354,21 +379,13 @@ h4 {
       a {
         @include socialLinks();
       }
-
-
       }
       #greeting {
         display: block;
         font-size: 1em;
-        top: 18vh;
-        width: 150px;
+        height: 100px;
         text-align: center;
         margin: 0 auto;
-        @media screen and (max-width: $break-small){
-          width: 100px;
-          top: 20vh;
-        }
-
       }
       #greeting::after {
         content: "";
@@ -378,7 +395,7 @@ h4 {
         right: -5px;
         width: 2px;
         /* Change colour of Cursor Here */
-        background-color: white;
+        background-color: $popoutText;
         z-index: 1;
         animation: flash 0.5s none infinite alternate;
       }
@@ -393,14 +410,12 @@ h4 {
       }
       
       #callToAction {
-        top: 50vh;
         width: 100px;
         font-size: 1em;
         text-decoration: none;
         color: black;
         margin: 0 auto;
         background-color: complement($headerColor);
-
         position: relative;
         border-radius: 5px;
         display: block;
@@ -408,18 +423,12 @@ h4 {
         transition: 1s;
         &:hover {
           transition: 0.5s;
-          color: white;
+          color: $popoutText;
           background-color: darken(complement($headerColor), 5);          
         }
-        @media screen and (min-width: $break-large){
-          top: 54vh;
-        }
-        
       }
 
       #contactLinks {
-        //position: absolute;
-        top: 67vh;
         display: flex;
         justify-content: space-between;
         width: 15vw;
@@ -427,10 +436,10 @@ h4 {
         justify-content: space-between;
         max-width: 150px;
         min-width: 100px;
-        @media screen and (min-width: $break-large){
-          top: 71vh;
-        }
       }
+
+
+
     #downArrow {
       font-size: 3em;
       text-decoration: none;
@@ -458,18 +467,87 @@ h4 {
 
 }
 
+ .quote {
+    margin:10px;
+    padding: 10px;
+    color:black;
+    font-size: 1em;
+  }
+  
+  .author {
+    margin:10px;
+    font-size: 2em;
+    position: relative;
+    right: 28%;
+    text-align: right;
+    font-size: 1.6em;
+    @media screen and (max-width: $break-small) {
+      right: 31%;
+    }
+
+  }
+  
+  .speech-bubble {
+    position: relative;
+    background: lighten($headerColor, 30);
+    border-radius: .4em;
+    margin: 10px;
+  }
+  
+  .speech-bubble:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 75%;
+    width: 0;
+    height: 0;
+    border: 1.9em solid transparent;
+    border-top-color: lighten($headerColor, 30);
+    border-left: 0;
+    border-bottom: 0;
+    margin-bottom: -1.8em;
+    margin-left: -1.062em;
+  }
+
 #about {
   width: 100%;
   background: linear-gradient(135deg, white, #4a81c8);
-  img {
-    width: 150px;
-    position: relative;
-    left: 80%;
-    top: -10vh;
-    //<img id="headshot" alt="headshot of Joseph looking up" src="media/headshot.png"></img>
+
+  h3 {
+    background-color: complement($headerColor);
+    padding: 20px;
+    text-align: center;
+  }
+h6 {
+  font-size: 1.2em;
+  text-align: center;
+}
+
+  #aboutMe {
+    display: flex;
+    #p {
+      margin: auto 0;
+      width: calc(100% - 180px);
+      @media screen and (max-width: $break-small){
+      width: 100%;
+    }
+    }
+
+  }
+  #quoteMe {
+    margin: auto 0;
+    width: 180px;
+    font-size: 0.8em;
+    display: inline;
     @media screen and (max-width: $break-small){
       display: none;
     }
+
+  }
+  img {
+    height: 180px;
+    width: 120px;
+    margin: auto 0;
   }
 
 }
@@ -548,57 +626,8 @@ h4 {
 
   }
 
-  .quotes {
-    font-size: 1.5em;
-    padding: 6px;
-    background: lighten($headerColor, 25);
-    text-align: center;
-    margin-bottom: 10px;
-  }
-
-  .quote {
-    margin:10px;
-    padding: 10px;
-    color:black;
-    font-size: 1em;
-  }
-  
-  .author {
-    margin:10px;
-    font-size: 2em;
-    position: relative;
-    right: 28%;
-    text-align: right;
-    font-size: 1.6em;
-    @media screen and (max-width: $break-small) {
-      right: 31%;
-    }
-
-  }
-  
-  .speech-bubble {
-    position: relative;
-    background: lighten($headerColor, 30);
-    border-radius: .4em;
-    margin: 10px;
-  }
-  
-  .speech-bubble:after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 75%;
-    width: 0;
-    height: 0;
-    border: 1.9em solid transparent;
-    border-top-color: lighten($headerColor, 30);
-    border-left: 0;
-    border-bottom: 0;
-    margin-bottom: -1.8em;
-    margin-left: -1.062em;
-  }
-
 }
+
 
 #contact {
   width: 100%;

@@ -65,7 +65,7 @@ header {
   .topNav .title {
     line-height: 80px;
     transition: 0.7s; }
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 480px), screen and (max-height: 480px) {
     .topNav {
       height: 60px;
       background-color: rgba(74, 129, 200, 0.2);
@@ -114,6 +114,10 @@ header {
       #menuSide li:hover a:before, #menuSide li:hover a:after, #menu li:hover a:before, #menu li:hover a:after {
         width: 50%;
         opacity: 1; } }
+  @media screen and (max-width: 480px), screen and (max-height: 480px) {
+    #menuSide li, #menu li {
+      color: #e5e5e5;
+      margin: 10px; } }
 
 #menu {
   display: flex;
@@ -237,6 +241,21 @@ header {
     font-size: 1.2em;
     width: 100px;
     margin: 0 auto; }
+  #welcome #smallPhone {
+    background-color: black;
+    color: #e5e5e5;
+    width: 15%;
+    height: 35vh;
+    border-radius: 5vh;
+    margin: 0 auto;
+    position: relative;
+    top: 55vh;
+    transform: translateY(-50%);
+    min-height: 250px;
+    min-width: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; }
   #welcome h5 {
     font-weight: normal;
     font-size: 0.7em;
@@ -254,14 +273,9 @@ header {
   #welcome #greeting {
     display: block;
     font-size: 1em;
-    top: 18vh;
-    width: 150px;
+    height: 100px;
     text-align: center;
     margin: 0 auto; }
-    @media screen and (max-width: 480px) {
-      #welcome #greeting {
-        width: 100px;
-        top: 20vh; } }
   #welcome #greeting::after {
     content: "";
     position: relative;
@@ -270,7 +284,7 @@ header {
     right: -5px;
     width: 2px;
     /* Change colour of Cursor Here */
-    background-color: white;
+    background-color: #e5e5e5;
     z-index: 1;
     animation: flash 0.5s none infinite alternate; }
 @keyframes flash {
@@ -279,7 +293,6 @@ header {
   100% {
     opacity: 0; } }
   #welcome #callToAction {
-    top: 50vh;
     width: 100px;
     font-size: 1em;
     text-decoration: none;
@@ -293,13 +306,9 @@ header {
     transition: 1s; }
     #welcome #callToAction:hover {
       transition: 0.5s;
-      color: white;
+      color: #e5e5e5;
       background-color: #bf853a; }
-    @media screen and (min-width: 1050px) {
-      #welcome #callToAction {
-        top: 54vh; } }
   #welcome #contactLinks {
-    top: 67vh;
     display: flex;
     justify-content: space-between;
     width: 15vw;
@@ -307,9 +316,6 @@ header {
     justify-content: space-between;
     max-width: 150px;
     min-width: 100px; }
-    @media screen and (min-width: 1050px) {
-      #welcome #contactLinks {
-        top: 71vh; } }
   #welcome #downArrow {
     font-size: 3em;
     text-decoration: none;
@@ -331,17 +337,73 @@ header {
     .section {
       max-width: 94%; } }
 
+.quote {
+  margin: 10px;
+  padding: 10px;
+  color: black;
+  font-size: 1em; }
+
+.author {
+  margin: 10px;
+  font-size: 2em;
+  position: relative;
+  right: 28%;
+  text-align: right;
+  font-size: 1.6em; }
+  @media screen and (max-width: 480px) {
+    .author {
+      right: 31%; } }
+
+.speech-bubble {
+  position: relative;
+  background: #bfd3ec;
+  border-radius: .4em;
+  margin: 10px; }
+
+.speech-bubble:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 75%;
+  width: 0;
+  height: 0;
+  border: 1.9em solid transparent;
+  border-top-color: #bfd3ec;
+  border-left: 0;
+  border-bottom: 0;
+  margin-bottom: -1.8em;
+  margin-left: -1.062em; }
+
 #about {
   width: 100%;
   background: linear-gradient(135deg, white, #4a81c8); }
-  #about img {
-    width: 150px;
-    position: relative;
-    left: 80%;
-    top: -10vh; }
+  #about h3 {
+    background-color: #c8914a;
+    padding: 20px;
+    text-align: center; }
+  #about h6 {
+    font-size: 1.2em;
+    text-align: center; }
+  #about #aboutMe {
+    display: flex; }
+    #about #aboutMe #p {
+      margin: auto 0;
+      width: calc(100% - 180px); }
+      @media screen and (max-width: 480px) {
+        #about #aboutMe #p {
+          width: 100%; } }
+  #about #quoteMe {
+    margin: auto 0;
+    width: 180px;
+    font-size: 0.8em;
+    display: inline; }
     @media screen and (max-width: 480px) {
-      #about img {
+      #about #quoteMe {
         display: none; } }
+  #about img {
+    height: 180px;
+    width: 120px;
+    margin: auto 0; }
 
 #build {
   width: 100%; }
@@ -392,45 +454,6 @@ header {
     @media screen and (max-width: 480px) {
       #build .mobile {
         width: 150px; } }
-  #build .quotes {
-    font-size: 1.5em;
-    padding: 6px;
-    background: #acc5e6;
-    text-align: center;
-    margin-bottom: 10px; }
-  #build .quote {
-    margin: 10px;
-    padding: 10px;
-    color: black;
-    font-size: 1em; }
-  #build .author {
-    margin: 10px;
-    font-size: 2em;
-    position: relative;
-    right: 28%;
-    text-align: right;
-    font-size: 1.6em; }
-    @media screen and (max-width: 480px) {
-      #build .author {
-        right: 31%; } }
-  #build .speech-bubble {
-    position: relative;
-    background: #bfd3ec;
-    border-radius: .4em;
-    margin: 10px; }
-  #build .speech-bubble:after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 75%;
-    width: 0;
-    height: 0;
-    border: 1.9em solid transparent;
-    border-top-color: #bfd3ec;
-    border-left: 0;
-    border-bottom: 0;
-    margin-bottom: -1.8em;
-    margin-left: -1.062em; }
 
 #contact {
   width: 100%;

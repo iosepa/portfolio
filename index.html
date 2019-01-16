@@ -1,176 +1,263 @@
-
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
-          <meta charset="UTF-8">
-            <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
-            <script src="functions.js"></script>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+  <script src="functions.js"></script>
 
-        </head>
-    </head>
-    <body onresize="resizeFun()">
-            <header id="nav" class="topNav">
-              <div id="navDiv">
-              <div class="title"><a href="#" onclick="shrinkNav(0)">io<span id="subTitle">sepa.io</span></a></div>
-                <ul id="menu" onclick="shrinkNav(10)">
-                  <li><a class="hover hoverUl nonTouch" href="#about">about</a></li>
-                  <li><a class="hover hoverUl" href="#build">portfolio</a></li>
-                  <li><a class="hover hoverUl" href="#contact">contact</a></li>
-                </ul>
-              <div id="menu-toggle" class="menu-toggle toggleBox" onclick="menuToggle()">
-                  <div class="bar1"></div>
-                  <div class="bar2"></div>
-                  <div class="bar3"></div>
+</head>
+</head>
+
+<body onresize="resizeFun()">
+  <header id="nav" class="topNav">
+    <div id="navDiv">
+      <div class="title"><a href="#" onclick="shrinkNav(10)">io<span id="subTitle">sepa.io</span></a></div>
+      <ul id="menu" onclick="shrinkNav(10)">
+        <li><a class="hover hoverUl nonTouch" href="#about">about</a></li>
+        <li><a class="hover hoverUl" href="#build">portfolio</a></li>
+        <li><a class="hover hoverUl" href="#contact">contact</a></li>
+      </ul>
+      <div id="menu-toggle" class="menu-toggle toggleBox" onclick="menuToggle()">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+    </div>
+  </header>
+  <div id="popout" class="notPopped">
+    <ul id="menuSide" onclick="shrinkNav(10)">
+      <li><a class="hover hoverUl" href="#about">about</a></li>
+      <li><a class="hover hoverUl" href="#build">portfolio</a></li>
+      <li><a class="hover hoverUl" href="#contact">contact</a></li>
+    </ul>
+
+  </div>
+  <div id="modal" onclick="menuToggle()">
+  </div>
+  <div id="container">
+    <div>
+    </div>
+    <div id="welcome" title="Hello. Would you like a beautiful website?">
+      <div class="section">
+
+        <div id="smallPhone">
+          <h5 id="greeting"></h5>
+          <h5><a id="callToAction" onclick="shrinkNav(10)" href="#contact">Yes</a></h5>
+
+          <h5 id="contactLinks">
+            <a href='mailto:j@climatejourney.com'><i class="fa fa-envelope-o"></i></a>
+            <a href='tel:(717)229-7171'><i class="fa fa-phone"></i></a></h5>
+
+        </div>
+        <a id="downArrow" href="#about" onclick='shrinkNav(10)'><i class="fa fa-angle-double-down"></i></a>
+      </div>
+
+
+    </div>
+    <div id="about">
+      <div class="section">
+        <h2>About</h2>
+
+
+
+        <h6>Are you a small business owner losing credibility and customers due to your web presence? </h6>
+        <h6>Would you like a partner in building something delightful? </h6>
+
+        <h5>Do I need an updated website?</h5>
+        <p>A study in 2016 by <a href='https://www.brightlocal.com/2016/03/04/gender-age-what-consumers-want-from-local-business-websites/'>brightlocal.com</a>
+          reported 36% of respondents said they were more likely to contact a business with a website. It also noted
+          younger consumers cared more about websites than those 55+.</p>
+        <h3>Hello, I'm Joseph and I build websites.</h3>
+        <div id="aboutMe">
+          <div id="p">
+            <p>I started programming in 2002. My professor said he’d give an “A” to whichever
+              student could build a working calculator using VB6 in less than 15 lines of code (or something like
+              that).
+              I did it, but he didn’t stick to his word! Surprise, surprise.</p>
+            <p>Later I built a linen tracking program
+              at
+              my hotel job. Then I worked for three years as a web
+              developer. Final couple years I was the lead programmer; I taught and guided the other
+              developers. Then I went to do hardware and became a NASA engineer. The work was interesting, it
+              just wasn’t as engaging. I loved the creativity, freedom and constant
+              problem solving of
+              web development. I felt could have a greater impact
+              at my computer. So, here I am, ready to create, develop and help you make the web (and world) a
+              better place.
+            </p>
+          </div>
+          <div id="quoteMe">
+            <hgroup class="speech-bubble">
+              <div class="row text-center">
+                <h5 class="quote">"To develop or not to develop? <i>Is that even a question?</i>”</h5>
               </div>
-</div>
-            </header>
-            <div id="popout" class="notPopped">
-                <ul id="menuSide" onclick="shrinkNav(10)">
-                    <li><a class="hover hoverUl" href="#about">about</a></li>
-                    <li><a class="hover hoverUl" href="#build">portfolio</a></li>
-                    <li><a class="hover hoverUl" href="#contact">contact</a></li>
-                  </ul>
-
-            </div>
-            <div id="modal" onclick="menuToggle()">
-              </div>
-            <div id="container">
-            <div>
-            </div>
-                <div id="welcome" title="Hello. Would you like a beautiful website?"> 
-                  <div class="section">
-
-                      <h5 id="contactLinks">
-                        <a href='mailto:j@climatejourney.com'><i class="fa fa-envelope-o"></i></a>
-                        <a href='tel:(717)229-7171'><i class="fa fa-phone"></i></a></h5>  
-                        <h5><a id="callToAction" onclick="shrinkNav(10)" href="#contact">Yes</a></h5>
-
-                        <h5 id="greeting"></h5>
-
-<a id="downArrow" href="#about" onclick='shrinkNav(10)'><i class="fa fa-angle-double-down"></i></a>
-                  </div>
+            </hgroup><img id="headshot" alt="headshot of Joseph looking up" src="media/headshot.png"></img>
+          </div>
+        </div>
 
 
-                </div>
-                <div id="about">
-                  <div class="section"><h2>About</h2>
+        <h3>The process.</h3>
 
-                    <h3>Hello, I'm Joseph and I build websites.</h3>
-                    <p>For client sites wordpress is my tool of choice.</p>
+        <ol>
+          <li>We’ll discuss if we are a good fit. </li>
+          <ul>
+            <li>Our discussion will include scope, timelines, how to determine if the website is a success. Links to
+              website or
+              two that
+              you admire
+              are useful for a starting point. </li>
+            <li>If we're not a good fit I can refer you to another web design company. </li>
+          </ul>
+          <li>We match (yay!) we’ll discuss timelines (for development/design and content), expectations, and sign a
+            contract.</li>
 
-                    <h3>Why wordpress?</h3> 
+          <li>I’ll build a mockup and get your approval for the serious work. </li>
+          <ul>
+            <li>If we decide on wordpress and you’d like to manage the site in-house I’ll provide
+              training on
+              caring for the site. </li>
 
-                    <p>Wordpress is a content management system (CMS). The designer/developer codes up how the site will look (the theme) and behave (plug-ins). Wordpress has an admin portal which allows the site owner to login and update content, add pages and even update wordpress-all without needing to contact the developer or mess with code. </p>
+            <li> We’ll go over SEO and how to ensure your website stays speedy.</li>
 
-                    <h3>Wordpress advantages:</h3>
-                      <ul>
-                      <li>Powers 30% of the web <a href="https://w3techs.com/technologies/overview/content_management/all"> circa Jan 2019.</a> </li>
-                    <li>Security updates </li>
-                    <li>Many useful plugins which can help with SEO, content management, forms etc…</li>
-                    <li>Large developer base, many developers are familiar and can help with existing sites.</li>
-                    </ul>
-                    <h3>Disadvantages:</h3>
-                    <ul>
-                    <li>Can be a little slower. </li>
-                    <li>CMS is developed and updated by a third party.</li>
-                    </ul>
-                    <img id="headshot" alt="headshot of Joseph looking up" src="media/headshot.png"></img>
-                    </div>
-              </div>
-            <div id="build">
+            <li>Sometimes the longest part of the process can be waiting for copy. </li>
+          </ul>
+          <li>You'll get weekly progress updates. </li>
 
-                <div class="section"><h2>Portfolio</h2>
+          <li>We’ll do a dry-run, make sure everything works and bring it live. </li>
+          <li>We can discuss if you want me to be involved with updating/hosting the site.</li>
+        </ol>
 
-<p>Had my first web development job in 2007. Here are a couple wordpress sites I've built recently.</p>
-                  <h4 id="uplyft"><a href="http://uplyftwellness.com">Uplyft Wellness</a></h4>
-                  
-<h5>Designed logo and website.</h5>
-<p><b>Logo:</b> convey a feeling of wholeness and health.</p>
-<p><b>Website: </b>Wordpress site with heavily customized theme. It is a place for customers to contact Isi. Explanations of her massage and yoga services. Contains her blog. If you are in Provo and are thinking about wellness; look her up!</p>
+        <h3>Why wordpress?</h3>
 
-                  <div class="flex portImg">
-                    <figure>  
-                  <a href="http://uplyftwellness.com"><img alt="image of uplyftwellness.com site" src="media/uplyft1.png"></img></a>
-                  <figcaption>Desktop</figcaption> </figure>
-                  <figure>
-                  <a href="http://uplyftwellness.com"><img class="mobile" alt="image of uplyftwellness.com mobile site" src="media/uplyft2.png"></img></a>
-                  <figcaption>Mobile</figcaption> </figure>  
-                </div>
+        <p>Wordpress is a content management system (CMS). The designer/developer codes up how the site will look (the
+          theme) and behave (plug-ins). Wordpress has an admin portal which allows the site owner to login and update
+          content, add pages and even update wordpress-all without needing to contact the developer or mess with code.
+        </p>
 
-                  <hgroup class="speech-bubble">
-                      <div class = "row text-center">
-                        <h5 class="quote">“I love the website and everything you've done!”</h5>
-                      </div>
-                    </hgroup>
-                        <h6 class="author">Isi</h6>
-                  <h4 id="swan"><a href="http://swan.climatejourney.com">Southern Women's Aid Network (SWAN)</a></h4>
-                  <h5>Designed website.</h5>
-                  <p><b>Website: </b>Wordpress site with custom theme. This is a very cool group of ladies working to make the world a better place. I met Saiqa in Greece working with a refugee camp. Their organization needed an online presence, happy to be a part of it.</p>
+        <h5>Wordpress advantages:</h5>
+        <ul>
+          <li>Powers 30% of the web <a href="https://w3techs.com/technologies/overview/content_management/all"> circa
+              Jan 2019.</a> </li>
+          <li>Security updates </li>
+          <li>Many useful plugins which can help with SEO, content management, forms etc…</li>
+          <li>Large developer base, many developers are familiar and can help with existing sites.</li>
+        </ul>
+        <h5>Disadvantages:</h5>
+        <ul>
+          <li>The plugins and options come at the cost of speed. </li>
+          <li>CMS is developed and updated by a third party.</li>
+        </ul>
 
-                  <div class="flex portImg">
-                    <figure> 
-                  <a href="http://swan.climatejourney.com"><img alt="image of swan website" src="media/swan1.png"></img></a>
-                  <figcaption>Desktop</figcaption> </figure>
-                  <figure>
-                  <a href="http://swan.climatejourney.com"><img class="mobile" alt="image of swan mobile website" src="media/swan2.png"></img></a>
-                  <figcaption>Mobile</figcaption> </figure>
+      </div>
+    </div>
+    <div id="build">
 
-                </div>
+      <div class="section">
+        <h2>Portfolio</h2>
 
-                  <hgroup class="speech-bubble">
-                      <div class = "row text-center">
-                        <h5 class="quote">“Joseph, it's really great. Thank you!”</h5>
-                      </div>
-                    </hgroup>
-                        <h6 class="author">Saiqa</h6>
+        <p>Here are a couple wordpress sites I've built recently.</p>
+        <h4 id="uplyft"><a href="http://uplyftwellness.com">Uplyft Wellness</a></h4>
 
-                </div>
-            </div>
+        <h5>Designed logo and website.</h5>
+        <p><b>Logo:</b> convey a feeling of wholeness and health.</p>
+        <p><b>Website: </b>Wordpress site with heavily customized theme. It is a place for customers to contact Isi.
+          Explanations of her massage and yoga services. Contains her blog. If you are in Provo and are thinking about
+          wellness; look her up!</p>
 
-                <div id="contact">
+        <div class="flex portImg">
+          <figure>
+            <a href="http://uplyftwellness.com"><img alt="image of uplyftwellness.com site" src="media/uplyft1.png"></img></a>
+            <figcaption>Desktop</figcaption>
+          </figure>
+          <figure>
+            <a href="http://uplyftwellness.com"><img class="mobile" alt="image of uplyftwellness.com mobile site" src="media/uplyft2.png"></img></a>
+            <figcaption>Mobile</figcaption>
+          </figure>
+        </div>
 
-                <div class="section"><h2>Contact</h2>
+        <hgroup class="speech-bubble">
+          <div class="row text-center">
+            <h5 class="quote">“I love the website and everything you've done!”</h5>
+          </div>
+        </hgroup>
+        <h6 class="author">Isi</h6>
+        <h4 id="swan"><a href="http://swan.climatejourney.com">Southern Women's Aid Network (SWAN)</a></h4>
+        <h5>Designed website.</h5>
+        <p><b>Website: </b>Wordpress site with custom theme. This is a very cool group of ladies working to make the
+          world a better place. I met Saiqa in Greece working with a refugee camp. Their organization needed an online
+          presence, happy to be a part of it.</p>
 
-                  <div class="container">  
-                    <form id="contactForm">
-                      <h4>Let's build it together.</h4>
-                        <input placeholder="Name*" type="text" name="name" tabindex="1" required>
-                        <input placeholder="Email Address*" type="email" name="email" tabindex="2" required>
-                        <input placeholder="Phone Number" type="tel" name="tel" tabindex="3">
-                        <textarea placeholder="Message*" name="comments" tabindex="4" required></textarea>
-                        <button name="submitBtn" id="contact-submit" type="submit" data-submit="...Sending">Contact</button>
-                        <p id='formResponse'></p>
-                    </form>
-                  </div>
-              </div>
-          
-                
-            </div>
-              
-            </div>
-            <footer>
-              <div id="innerFooter">
-              <div><h6>Connect</h6>
-              <p>
-                <a href='https://www.linkedin.com/in/joseph-oxborrow/'><i class="fa fa-linkedin"></i></a>
-                <a href='https://codepen.io/iosepa/'><i class="fa fa-codepen"></i></a>
-                <a href='https://bitbucket.org/jclimate/'><i class="fa fa-bitbucket"></i></a>
-                <a href='mailto:j@climatejourney.com'><i class="fa fa-envelope-o"></i></a>
-                <a href='tel:(717)229-7171'><i class="fa fa-phone"></i></a>
-</p>
-              </div>
-              <div><h6>iosepa.io</h6>
-                <p>Was designed and handcoded by Joseph Oxborrow using vanilla javascript, php, html and scss.</p>
+        <div class="flex portImg">
+          <figure>
+            <a href="http://swan.climatejourney.com"><img alt="image of swan website" src="media/swan1.png"></img></a>
+            <figcaption>Desktop</figcaption>
+          </figure>
+          <figure>
+            <a href="http://swan.climatejourney.com"><img class="mobile" alt="image of swan mobile website" src="media/swan2.png"></img></a>
+            <figcaption>Mobile</figcaption>
+          </figure>
 
-              </div>
+        </div>
+
+        <hgroup class="speech-bubble">
+          <div class="row text-center">
+            <h5 class="quote">“Joseph, it's really great. Thank you!”</h5>
+          </div>
+        </hgroup>
+        <h6 class="author">Saiqa</h6>
+
+      </div>
+    </div>
+
+    <div id="contact">
+
+      <div class="section">
+        <h2>Contact</h2>
+
+        <div class="container">
+          <form id="contactForm">
+            <h4>Let's build it together.</h4>
+            <input placeholder="Name*" type="text" name="name" tabindex="1" required>
+            <input placeholder="Email Address*" type="email" name="email" tabindex="2" required>
+            <input placeholder="Phone Number" type="tel" name="tel" tabindex="3">
+            <textarea placeholder="Message*" name="comments" tabindex="4" required></textarea>
+            <button name="submitBtn" id="contact-submit" type="submit" data-submit="...Sending">Contact</button>
+            <p id='formResponse'></p>
+          </form>
+        </div>
+      </div>
 
 
-              </div>
-            </footer>
-            </div>
-          </body>
+    </div>
+
+  </div>
+  <footer>
+    <div id="innerFooter">
+      <div>
+        <h6>Connect</h6>
+        <p>
+          <a href='https://www.linkedin.com/in/joseph-oxborrow/'><i class="fa fa-linkedin"></i></a>
+          <a href='https://codepen.io/iosepa/'><i class="fa fa-codepen"></i></a>
+          <a href='https://bitbucket.org/jclimate/'><i class="fa fa-bitbucket"></i></a>
+          <a href='mailto:j@climatejourney.com'><i class="fa fa-envelope-o"></i></a>
+          <a href='tel:(717)229-7171'><i class="fa fa-phone"></i></a>
+        </p>
+      </div>
+      <div>
+        <h6>iosepa.io</h6>
+        <p>Was designed and handcoded by Joseph Oxborrow using vanilla javascript, php, html and scss.</p>
+
+      </div>
+
+
+    </div>
+  </footer>
+  </div>
+</body>
+
 </html>
