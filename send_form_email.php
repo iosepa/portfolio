@@ -30,7 +30,7 @@ $success = @mail($EmailTo, $Subject, $message, $headers);
 
 // redirect to success page
 if ($success){
-   echo " Expect a response within 2 business days.";
+   echo " Expect a response within two business days.";
 }else{
     echo " Sorry, we're having technical difficulties.";
 }

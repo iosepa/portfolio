@@ -541,6 +541,14 @@ h6 {
     @media screen and (max-width: $break-small){
       display: none;
     }
+    .speech-bubble {
+      background: lighten($headerColor, 30);
+
+    }
+    .speech-bubble:after{
+    border-top-color: lighten($headerColor, 30);
+
+    }
 
   }
   img {
@@ -739,5 +747,9 @@ h6 {
     input:focus, textarea:focus {
       outline:0;
       border:1px solid #999;
+    }
+    #formResponse {
+      font-size: 1em;
+      line-height: 1.6em;
     }
   }

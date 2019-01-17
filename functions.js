@@ -1,14 +1,14 @@
-window.onload = function(){
-  
-  autoType("greeting",95, "Hello. Would you like a beautiful website?");
+window.onload = function () {
 
-  setTimeout(function(){
+  autoType("greeting", 95, "Hello. Would you like a beautiful website?");
+
+  setTimeout(function () {
     document.getElementById('callToAction').style.opacity = "1";
   }, 4000);
 
   if (5 < window.scrollY) shrinkNav(window.scrollY);
 
-  window.onscroll = function() { shrinkNav(window.scrollY); };
+  window.onscroll = function () { shrinkNav(window.scrollY); };
 
   document.getElementById('contactForm').addEventListener('submit', (e) => {
 
@@ -18,22 +18,22 @@ window.onload = function(){
     let postData = "";
     let custName = '';
 
-    for (let i=0; i<elements.length; i++){
+    for (let i = 0; i < elements.length; i++) {
       let field = elements.item(i);
-      if(field.name == 'name'){
+      if (field.name == 'name') {
         custName = field.value;
       }
       postData += field.name + "=" + field.value + "&";
-    } 
+    }
 
-    postData = postData.replace(/\s/g,'+');
+    postData = postData.replace(/\s/g, '+');
 
     fetch('send_form_email.php', {
-      headers: {'Content-Type':'application/x-www-form-urlencoded'}, 
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: postData,
       method: 'POST'
     })
-    .then(function(response){ return response.text()}).then(text=>document.getElementById('formResponse').innerHTML+=text);
+      .then(function (response) { return response.text() }).then(text => document.getElementById('formResponse').innerHTML += text);
 
     document.getElementById('contactForm').reset();
     document.getElementById('formResponse').innerHTML = "Thank you, " + custName + ".";
@@ -45,26 +45,26 @@ window.onload = function(){
 
 function shrinkNav(scrollPos) {
 
- 
+
 
   let headerEl = document.getElementById("nav");
   let menu = document.getElementById("menu");
   let toggle = document.getElementById("menu-toggle");
 
- 
+
 
   if (document.getElementById("popout").classList.contains("popped")) menuToggle(); //pull the popout in
 
-  if ((5 < scrollPos && !headerEl.classList.contains("smallNav")) || 
-      (5 >= scrollPos && headerEl.classList.contains("smallNav"))){ 
+  if ((5 < scrollPos && !headerEl.classList.contains("smallNav")) ||
+    (5 >= scrollPos && headerEl.classList.contains("smallNav"))) {
     toggleNav();
   }
 
-  function toggleNav(){
-   headerEl.classList.toggle("smallNav");
-   if (480 > document.body.clientWidth) { return };
-   menu.style.display = (window.getComputedStyle(menu).display == 'none' ? 'flex' : 'none');
-   toggle.style.display = (window.getComputedStyle(toggle).display == 'none' ? 'inline-block' : 'none');
+  function toggleNav() {
+    headerEl.classList.toggle("smallNav");
+    if (480 > document.body.clientWidth) { return };
+    menu.style.display = (window.getComputedStyle(menu).display == 'none' ? 'flex' : 'none');
+    toggle.style.display = (window.getComputedStyle(toggle).display == 'none' ? 'inline-block' : 'none');
   }
 }
 
@@ -73,7 +73,7 @@ function resizeFun() {
   let toggle = document.getElementById("menu-toggle");
 
   if (5 < window.scrollY) return;
-  if (480 > document.body.clientWidth && window.getComputedStyle(menu).display == 'flex'){
+  if (480 > document.body.clientWidth && window.getComputedStyle(menu).display == 'flex') {
     menu.style.display = 'none';
     toggle.style.display = 'inline-block';
   }
@@ -83,7 +83,7 @@ function resizeFun() {
   }
 }
 
-function scrollWatch(){
+function scrollWatch() {
 
 }
 /*
@@ -91,27 +91,27 @@ function scrollWatch(){
 var loaded = false;
 
 function menuToggle() {
-    document.getElementById("menu-toggle").classList.toggle( "change" ); //css to animate hamburger
-    modDis = document.getElementById("modal");
-    popout = document.getElementById("popout").classList.toggle("popped");
-    window.getComputedStyle(modDis).display == "none" ? modDis.style.display = "block" : modDis.style.display = "none";
+  document.getElementById("menu-toggle").classList.toggle("change"); //css to animate hamburger
+  modDis = document.getElementById("modal");
+  popout = document.getElementById("popout").classList.toggle("popped");
+  window.getComputedStyle(modDis).display == "none" ? modDis.style.display = "block" : modDis.style.display = "none";
 }
 
 
-function autoType(elementID, typingSpeed, text){
+function autoType(elementID, typingSpeed, text) {
   let thhis = document.getElementById(elementID);
   let amntOfChars = text.length;
   let newString = "";
-  
-  setTimeout(function(){
+
+  setTimeout(function () {
     thhis.style.opacity = "1";
     thhis.innerHTML = "";
-    for(let i = 0; i < amntOfChars; i++){
-      (function(i,char){
-        setTimeout(function() {        
+    for (let i = 0; i < amntOfChars; i++) {
+      (function (i, char) {
+        setTimeout(function () {
           thhis.innerHTML += char;
-        },i*typingSpeed)
-      })(i+1,text[i]);
+        }, i * typingSpeed)
+      })(i + 1, text[i]);
     }
-  },200);
+  }, 200);
 }
