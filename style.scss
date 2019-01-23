@@ -176,21 +176,28 @@ h4 {
               background-color: black;
             }
           }
+        
         }
 
-        @media (min-width: $break-large){
-      
-        &:hover {
+
+        //@media (min-width: $break-large){
+        @media (pointer: fine) {
+          &:hover {
+
           cursor: pointer;
-          a {
+          a{
             &:before,
             &:after {
               width: 50%;
               opacity: 1;
             }
           }
-        }
-      }
+        }}
+      
+    
+
+
+
       @media screen and (max-width: $break-small), screen and (max-height: $break-small) {
         color: $popoutText;
         margin: 10px;

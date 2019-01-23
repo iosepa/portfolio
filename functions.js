@@ -6,10 +6,14 @@ window.onload = function () {
     document.getElementById('callToAction').style.opacity = "1";
   }, 4000);
 
+  //in case website is refreshed not at top
   if (5 < window.scrollY) shrinkNav(window.scrollY);
+
 
   window.onscroll = function () { shrinkNav(window.scrollY); };
 
+
+  //ajax for contact
   document.getElementById('contactForm').addEventListener('submit', (e) => {
 
     event.preventDefault();
@@ -33,25 +37,22 @@ window.onload = function () {
       body: postData,
       method: 'POST'
     })
-      .then(function (response) { return response.text() }).then(text => document.getElementById('formResponse').innerHTML += text);
+      .then(function (response) { return response.text() })
+      .then(text => document.getElementById('formResponse').innerHTML += text);
 
     document.getElementById('contactForm').reset();
     document.getElementById('formResponse').innerHTML = "Thank you, " + custName + ".";
 
   }, false);
-
-
 }
 
+
+//handle navbar transitions
 function shrinkNav(scrollPos) {
-
-
 
   let headerEl = document.getElementById("nav");
   let menu = document.getElementById("menu");
   let toggle = document.getElementById("menu-toggle");
-
-
 
   if (document.getElementById("popout").classList.contains("popped")) menuToggle(); //pull the popout in
 
@@ -83,21 +84,17 @@ function resizeFun() {
   }
 }
 
-function scrollWatch() {
 
-}
-/*
-*/
-var loaded = false;
-
+//handles animation of hamburger menu
 function menuToggle() {
-  document.getElementById("menu-toggle").classList.toggle("change"); //css to animate hamburger
+  document.getElementById("menu-toggle").classList.toggle("change");
   modDis = document.getElementById("modal");
   popout = document.getElementById("popout").classList.toggle("popped");
   window.getComputedStyle(modDis).display == "none" ? modDis.style.display = "block" : modDis.style.display = "none";
 }
 
 
+//typing at top of page
 function autoType(elementID, typingSpeed, text) {
   let thhis = document.getElementById(elementID);
   let amntOfChars = text.length;
