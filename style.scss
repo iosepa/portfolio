@@ -18,10 +18,13 @@ $imageWidth: 50vw;
   i{
     color: $smallNavFg;
     text-decoration: none;
+    transition: all .2s ease-in-out;
 
   }
   i:hover {
     color: $headerColor; //invert($smallNavBg);
+    transform: scale(1.1);
+
   }
   .icon-background {
     color: $smallNavBg;
@@ -442,6 +445,7 @@ h4 {
         justify-content: space-between;
         max-width: 150px;
         min-width: 100px;
+        height: 30px;
       }
 
 
