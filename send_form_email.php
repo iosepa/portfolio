@@ -4,7 +4,7 @@ $name = urldecode($_POST["name"]);
 $email_from = filter_var($_POST["email"], FILTER_SANITIZE_EMAIL);
 $message = urldecode($_POST["comments"]);
  
-$EmailTo = "jboxborrow@gmx.com";
+$EmailTo = "hello@iosepa.io";
 $Subject = "iosepa.io message";
  
 // prepare email body text
