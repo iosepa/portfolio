@@ -9,7 +9,7 @@ body {
   line-height: calc(1em*1.618);
   color: #333; }
 
-h2 {
+h1 {
   font-family: "Exo";
   margin: 10px auto;
   text-align: center;
@@ -235,12 +235,13 @@ header {
   min-width: 100vw;
   color: #e5e5e5;
   text-align: center; }
-  #welcome h2 {
+  #welcome h1 {
     top: 70vh;
     position: absolute;
     font-size: 1.2em;
     width: 100px;
-    margin: 0 auto; }
+    margin: 0 auto;
+    text-align: center; }
   #welcome #smallPhone {
     background-color: black;
     color: #e5e5e5;
