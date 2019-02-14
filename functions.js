@@ -13,7 +13,7 @@ window.onload = function () {
   window.onscroll = function () { shrinkNav(window.scrollY); };
 
 
-  //ajax for contact
+  //ajax for contact form
   document.getElementById('contactForm').addEventListener('submit', (e) => {
 
     event.preventDefault();
@@ -69,6 +69,7 @@ function shrinkNav(scrollPos) {
   }
 }
 
+//keeps menus correct if browser is resized
 function resizeFun() {
   let menu = document.getElementById("menu");
   let toggle = document.getElementById("menu-toggle");

@@ -19,12 +19,10 @@ $imageWidth: 50vw;
     color: $smallNavFg;
     text-decoration: none;
     transition: all .2s ease-in-out;
-
   }
   i:hover {
-    color: $headerColor; //invert($smallNavBg);
+    color: $headerColor; 
     transform: scale(1.1);
-
   }
   .icon-background {
     color: $smallNavBg;
@@ -87,6 +85,9 @@ h4 {
     justify-content: space-between;
     max-width: $outsideWidth;
     pointer-events:none;
+    @media screen and (max-width: $outsideWidth){
+    max-width: 96vw;
+  }
 
   }
   
@@ -140,10 +141,6 @@ h4 {
     }
   }
   
-
-  
-
-  
 #menuSide, #menu {
 
   li {
@@ -152,7 +149,6 @@ h4 {
     margin: 0 0.2em;
    //transition: 0.5s;
      a {
-
       
           text-decoration: none;
           color: black;
@@ -179,9 +175,7 @@ h4 {
               background-color: black;
             }
           }
-        
         }
-
 
         //@media (min-width: $break-large){
         @media (pointer: fine) {
@@ -196,17 +190,12 @@ h4 {
             }
           }
         }}
-      
-    
-
-
 
       @media screen and (max-width: $break-small), screen and (max-height: $break-small) {
         color: $popoutText;
         margin: 10px;
       
       }
-
   } //https://codepen.io/mxttsco/pen/KgodYm?editors=1000
 }
 
@@ -472,10 +461,8 @@ h4 {
   min-height: 100vh;
   max-width: 1000px;
   @media screen and (max-width: 1000px){
-    max-width: 94%;
-    
+    max-width: 94%; 
   }
-
 }
 
  .quote {
