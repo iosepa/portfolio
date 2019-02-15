@@ -44,6 +44,9 @@ header {
   justify-content: space-between;
   max-width: 1120px;
   pointer-events: none; }
+  @media screen and (max-width: 1120px) {
+    #navDiv {
+      max-width: 96vw; } }
 
 .title {
   margin: 10px;

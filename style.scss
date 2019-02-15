@@ -199,7 +199,6 @@ h4 {
   } //https://codepen.io/mxttsco/pen/KgodYm?editors=1000
 }
 
-
   #menu {
     display: flex;
     justify-content: space-between;
@@ -328,11 +327,7 @@ h4 {
     display: grid;
     width: 100%;
     background-color: white; 
-    //margin-top: 100px;
     justify-items: center;
-    @media screen and (max-width: $break-small) {
-      //margin-top: 65px;
-    } 
   }
   
   #welcome {
@@ -438,8 +433,6 @@ h4 {
         height: 30px;
       }
 
-
-
     #downArrow {
       font-size: 3em;
       text-decoration: none;
@@ -482,7 +475,6 @@ h4 {
     @media screen and (max-width: $break-small) {
       right: 31%;
     }
-
   }
   
   .speech-bubble {
@@ -555,12 +547,10 @@ h6 {
     width: 120px;
     margin: auto 0;
   }
-
 }
 
 #build {
   width: 100%;
-  //background: linear-gradient(135deg, #bfd3ec, #e3c6b5);
   
   h5 {
     font-size: 1.2em;
@@ -596,7 +586,6 @@ h6 {
   }
 
   img {
-    
     width: $imageWidth;
     border-radius: 8px;
     border: 3px solid rgb(19, 16, 16);
@@ -604,16 +593,12 @@ h6 {
     margin: 20px auto;
     transition: all 0.5s ease;
 
-
     @media screen and (min-width: $break-large){
       width: 500px;
     }
     @media screen and (max-width: $break-small){
       width: 300px;
     }
-
-
-
   }
 
   img:hover {

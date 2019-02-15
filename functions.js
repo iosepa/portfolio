@@ -1,12 +1,15 @@
 window.onload = function () {
 
+
+  //auto Type text
   autoType("greeting", 95, "Hello. Would you like a beautiful website?");
 
+  //show button to contact form
   setTimeout(function () {
     document.getElementById('callToAction').style.opacity = "1";
   }, 4000);
 
-  //in case website is refreshed not at top
+  //makes sure navbar is correct when page is refreshed
   if (5 < window.scrollY) shrinkNav(window.scrollY);
 
 
@@ -15,13 +18,13 @@ window.onload = function () {
 
   //ajax for contact form
   document.getElementById('contactForm').addEventListener('submit', (e) => {
-
-    event.preventDefault();
-
-    let elements = document.getElementById('contactForm').elements;
+    const elements = document.getElementById('contactForm').elements;
     let postData = "";
     let custName = '';
 
+    event.preventDefault();
+
+    //assemble post data and pull customer name
     for (let i = 0; i < elements.length; i++) {
       let field = elements.item(i);
       if (field.name == 'name') {
@@ -37,7 +40,7 @@ window.onload = function () {
       body: postData,
       method: 'POST'
     })
-      .then(function (response) { return response.text() })
+      .then(response => response.text())
       .then(text => document.getElementById('formResponse').innerHTML += text);
 
     document.getElementById('contactForm').reset();
@@ -49,13 +52,13 @@ window.onload = function () {
 
 //handle navbar transitions
 function shrinkNav(scrollPos) {
+  const headerEl = document.getElementById("nav");
+  const menu = document.getElementById("menu");
+  const toggle = document.getElementById("menu-toggle");
 
-  let headerEl = document.getElementById("nav");
-  let menu = document.getElementById("menu");
-  let toggle = document.getElementById("menu-toggle");
+  if (document.getElementById("popout").classList.contains("popped")) menuToggle(); //pull the popout in when scrolling
 
-  if (document.getElementById("popout").classList.contains("popped")) menuToggle(); //pull the popout in
-
+  //check if the bar should be changed
   if ((5 < scrollPos && !headerEl.classList.contains("smallNav")) ||
     (5 >= scrollPos && headerEl.classList.contains("smallNav"))) {
     toggleNav();
@@ -71,8 +74,8 @@ function shrinkNav(scrollPos) {
 
 //keeps menus correct if browser is resized
 function resizeFun() {
-  let menu = document.getElementById("menu");
-  let toggle = document.getElementById("menu-toggle");
+  const menu = document.getElementById("menu");
+  const toggle = document.getElementById("menu-toggle");
 
   if (5 < window.scrollY) return;
   if (480 > document.body.clientWidth && window.getComputedStyle(menu).display == 'flex') {
@@ -86,7 +89,7 @@ function resizeFun() {
 }
 
 
-//handles animation of hamburger menu
+//handles animation of hamburger menu and pushing out the modal
 function menuToggle() {
   document.getElementById("menu-toggle").classList.toggle("change");
   modDis = document.getElementById("modal");
@@ -97,14 +100,12 @@ function menuToggle() {
 
 //typing at top of page
 function autoType(elementID, typingSpeed, text) {
-  let thhis = document.getElementById(elementID);
-  let amntOfChars = text.length;
-  let newString = "";
+  const thhis = document.getElementById(elementID);
 
   setTimeout(function () {
     thhis.style.opacity = "1";
     thhis.innerHTML = "";
-    for (let i = 0; i < amntOfChars; i++) {
+    for (let i = 0; i < text.length; i++) {
       (function (i, char) {
         setTimeout(function () {
           thhis.innerHTML += char;
