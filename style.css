@@ -426,9 +426,17 @@ header {
   #build #swan {
     background-color: #043a95;
     padding: 40px; }
+  #build #other {
+    background-color: #2ab680;
+    padding: 40px;
+    color: white; }
   #build h4 a {
     color: white;
     font-weight: 300; }
+  #build figure {
+    max-width: 400px;
+    min-width: 300px;
+    padding: 2rem; }
   #build .portImg {
     display: flex;
     flex-wrap: wrap;
@@ -455,6 +463,9 @@ header {
     @media screen and (max-width: 480px) {
       #build img {
         width: 300px; } }
+  #build .other-img {
+    max-width: 400px;
+    min-width: 300px; }
   #build img:hover {
     background: linear-gradient(135deg, #bfd3ec, #e3c6b5); }
   #build .mobile {
