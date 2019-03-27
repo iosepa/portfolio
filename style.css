@@ -433,10 +433,11 @@ header {
   #build h4 a {
     color: white;
     font-weight: 300; }
-  #build figure {
+  #build .otherFigures {
     max-width: 400px;
     min-width: 300px;
-    padding: 2rem; }
+    margin: 0 auto;
+    padding-bottom: 2rem; }
   #build .portImg {
     display: flex;
     flex-wrap: wrap;
@@ -452,9 +453,10 @@ header {
     margin-top: -20px; }
   #build img {
     width: 50vw;
-    border-radius: 8px;
+    width: 400px;
+    /* border-radius: 8px; */
     border: 3px solid #131010;
-    padding: 5px;
+    /* padding: 5px; */
     margin: 20px auto;
     transition: all 0.5s ease; }
     @media screen and (min-width: 1050px) {
@@ -463,8 +465,8 @@ header {
     @media screen and (max-width: 480px) {
       #build img {
         width: 300px; } }
-  #build .other-img {
-    max-width: 400px;
+  #build .otherFigures .other-img {
+    max-width: 394px;
     min-width: 300px; }
   #build img:hover {
     background: linear-gradient(135deg, #bfd3ec, #e3c6b5); }
