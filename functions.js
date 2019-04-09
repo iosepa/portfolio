@@ -2,7 +2,7 @@ window.onload = function () {
 
 
   //auto Type text
-  autoType("greeting", 95, "Hello. Would you like a beautiful website?");
+  autoType("greeting", 95, "Hello. Are you looking for your next developer?");
 
   //show button to contact form
   setTimeout(function () {
