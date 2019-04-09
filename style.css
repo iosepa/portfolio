@@ -317,7 +317,7 @@ header {
   #welcome #contactLinks {
     display: flex;
     justify-content: space-between;
-    width: 15vw;
+    width: 14vw;
     margin: 0 auto;
     justify-content: space-between;
     max-width: 150px;
@@ -420,6 +420,11 @@ header {
   width: 100%; }
   #build h5 {
     font-size: 1.2em; }
+  #build h3 {
+    text-align: center;
+    font-size: 1.9rem;
+    font-family: "Exo";
+    margin-bottom: 0.7rem; }
   #build #uplyft {
     background-color: #943ea0;
     padding: 40px; }
@@ -450,7 +455,7 @@ header {
     text-align: center;
     font-size: 1.2em;
     font-weight: 500;
-    margin-top: -20px; }
+    margin-top: 0; }
   #build img {
     width: 50vw;
     width: 400px;
