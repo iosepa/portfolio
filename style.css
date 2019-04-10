@@ -431,6 +431,12 @@ header {
   #build #swan {
     background-color: #043a95;
     padding: 40px; }
+  #build #freshAir {
+    background-color: #35a645;
+    padding: 40px; }
+  #build #contacts {
+    background-color: #6359d0;
+    padding: 40px; }
   #build #other {
     background-color: #2ab680;
     padding: 40px;
@@ -470,6 +476,8 @@ header {
     @media screen and (max-width: 480px) {
       #build img {
         width: 300px; } }
+  #build h3 .project-h {
+    background: #2ab680; }
   #build .otherFigures .other-img {
     max-width: 394px;
     min-width: 300px; }
