@@ -434,7 +434,7 @@ h4 {
       }
 
     #downArrow {
-      font-size: 3em;
+      font-size: 2em;
       text-decoration: none;
       position: absolute;
       top: 80vh;
@@ -515,32 +515,45 @@ h6 {
 
   #aboutMe {
     display: flex;
+
+ 
+
     #p {
       margin: auto 0;
-      width: calc(100% - 180px);
+      width: calc(100% - 200px);
+      
       @media screen and (max-width: $break-small){
-      width: 100%;
-    }
-    }
-    i {
-      font-size: 4em;
-    }
+        width: 100%;
+      }
+
+
     
-    .ic {
+    }
+
+
+
+  }
+
+      #skills {
       display: flex;
-      justify-content: center;
+      height: 300px;
+      flex-flow: column wrap;
+      align-content: space-around;
+      justify-content: space-around;
+        margin: 1rem 0;
+      @media screen and (max-width: $break-small){
+        height: 400px;
+      }
+    .ic {
+      i {
+        font-size: 6rem;
+      }
+      width: 8rem;
+      display: flex;
+      justify-content: space-between;
       flex-direction: column;
       text-align: center;
     }
-    
-    #skills {
-      width: 700px;
-      display: flex;
-      flex-flow: column wrap;
-      height: 200px;
-      justify-content: space-around;
-    }
-
   }
   #quoteMe {
     margin: auto 0;

@@ -324,7 +324,7 @@ header {
     min-width: 100px;
     height: 30px; }
   #welcome #downArrow {
-    font-size: 3em;
+    font-size: 2em;
     text-decoration: none;
     position: absolute;
     top: 80vh;
@@ -395,10 +395,28 @@ header {
     display: flex; }
     #about #aboutMe #p {
       margin: auto 0;
-      width: calc(100% - 180px); }
+      width: calc(100% - 200px); }
       @media screen and (max-width: 480px) {
         #about #aboutMe #p {
           width: 100%; } }
+  #about #skills {
+    display: flex;
+    height: 300px;
+    flex-flow: column wrap;
+    align-content: space-around;
+    justify-content: space-around;
+    margin: 1rem 0; }
+    @media screen and (max-width: 480px) {
+      #about #skills {
+        height: 400px; } }
+    #about #skills .ic {
+      width: 8rem;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      text-align: center; }
+      #about #skills .ic i {
+        font-size: 6rem; }
   #about #quoteMe {
     margin: auto 0;
     width: 180px;

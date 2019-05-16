@@ -3,7 +3,9 @@
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
   <link rel="shortcut icon" href="media/iosepaLogo.png" type="image/x-icon" />
   <title>iosepa.io - Web Development</title>
   <meta name="description"
@@ -61,87 +63,84 @@
           <h5><a id="callToAction" onclick="shrinkNav(10)" href="#contact">Yes</a></h5>
 
           <h5 id="contactLinks">
-            <a href='mailto:hello@iosepa.io'><i class="fa fa-envelope-o"></i></a>
-            <a href='tel:(717)229-7171'><i class="fa fa-phone"></i></a></h5>
+            <a href='mailto:hello@iosepa.io'><i class="far fa-envelope"></i></a>
+            <a href='tel:(717)229-7171'><i class="fas fa-phone"></i></a></h5>
 
         </div>
-        <a id="downArrow" href="#about" onclick='shrinkNav(10)'><i class="fa fa-angle-double-down"></i></a>
+        <a id="downArrow" href="#about" onclick='shrinkNav(10)'>
+          <i class="fas fa-chevron-down"></i></a>
       </div>
 
 
     </div>
     <div id="about">
       <div class="section">
-        <h1>Skills</h1>
+        <h1>About</h1>
 
 
-        
-        <div id="aboutMe">
+        <div>
+          <div id="aboutMe">
+            <div id="p">
+              <p>I started programming in 2002. My professor said he’d give an automatic “A” to any
+                student who could build a working calculator using VB6 in less than 15 lines of code (or
+                something like
+                that).
+                I did, but he didn’t stick to his word! Surprise, surprise.</p>
+              <p>Later I built a linen tracking program
+                to replace papers forms we'd been using at
+                my hotel job. Then I worked for three years as a web
+                developer. Final two years as the lead programmer; I taught and guided the other
+                developers. At that point I thought it would be exciting to do research and work on hardware. So I
+                became
+                an engineer at
+                NASA. The work was interesting, it
+                just wasn’t as engaging. Loved the creativity, freedom and constant
+                problem solving of
+                web development and felt I could have a greater impact
+                at my computer. So, here I am, ready to create, develop, and help you make the web (and world) a
+                better place.
+              </p>
 
-            <div id="skills">
-                <div class="ic">
+
+            </div>
+            <div id="quoteMe">
+              <hgroup class="speech-bubble">
+                <div class="row text-center">
+                  <h5 class="quote">"To code or not to code? <i>Is that even a question?</i>”</h5>
+                </div>
+              </hgroup><img id="headshot" alt="headshot of Joseph looking up" src="media/headshot.png"></img>
+            </div>
+          </div>
+          <h4>Tech Stack</h4>
+          <div id="skills">
+
+            <div class="ic">
               <i class="fab fa-angular"></i>
-                Angular
-                </div>
-                <div class="ic">
-              <i class="fab fa-js"></i>
-                ES6
-                </div>
-                <div class="ic">
-              <i class="fab fa-sass"></i>
-                SCSS
-                </div>
-                <div class="ic">
-              <i class="fab fa-html5"></i>
-                HTML
-                </div>
-                <div class="ic">
-              <i class="fab fa-php"></i>
-                PHP
-                </div>
-                <div class="ic">
+              Angular
+            </div>
+            <div class="ic">
               <i class="fab fa-github"></i>
-                Git
-                </div>
-                
-              </div>
+              Git
+            </div>
+            <div class="ic">
+              <i class="fab fa-js"></i>
+              ES6
+            </div>
+            <div class="ic">
+              <i class="fab fa-node-js"></i>
+              Node.js
+            </div>
+            <div class="ic">
+              <i class="fab fa-sass"></i>
+              SCSS/SASS
+            </div>
+            <div class="ic">
+              <i class="fab fa-html5"></i>
+              HTML
+            </div>
 
-          <!--
-          <div id="p">
-            <p>I started programming in 2002. My professor said he’d give an automatic “A” to any
-              student who could build a working calculator using VB6 in less than 15 lines of code (or
-              something like
-              that).
-              I did, but he didn’t stick to his word! Surprise, surprise.</p>
-            <p>Later I built a linen tracking program
-              to replace papers forms we'd been using at
-              my hotel job. Then I worked for three years as a web
-              developer. Final two years as the lead programmer; I taught and guided the other
-              developers. At that point I thought it would be exciting to do research and work on hardware. So I became
-              an engineer at
-              NASA. The work was interesting, it
-              just wasn’t as engaging. Loved the creativity, freedom and constant
-              problem solving of
-              web development and felt I could have a greater impact
-              at my computer. So, here I am, ready to create, develop, and help you make the web (and world) a
-              better place.
-            </p>
-            <p>The modern web development world is a bustling place. I've focused on building a
-              solid
-              foundation with HTML, CSS/SASS and Javascript/ES6. On top of them I'm using
-              Angular 2+, I like that is opioniated;
-              helping me write better code. I find Bootstrap useful and I've started playing with Nebular, it's
-              beautiful. My RESTful API uses Express.js and MongoDB.
 
-            </p>
-            
-          </div>-->
-          <div id="quoteMe">
-            <hgroup class="speech-bubble">
-              <div class="row text-center">
-                <h5 class="quote">"To code or not to code? <i>Is that even a question?</i>”</h5>
-              </div>
-            </hgroup><img id="headshot" alt="headshot of Joseph looking up" src="media/headshot.png"></img>
+
           </div>
         </div>
 
@@ -155,7 +154,6 @@
       <div class="section">
         <h1>Portfolio</h1>
 
-        <p>Here are some sites I've built recently.</p>
 
         <h4 id="freshAir"><a href="https://iosepa.github.io/outside">FreshAir</a></h4>
         <h5>Built with Angular CLI</h5>
@@ -254,7 +252,7 @@
 
         <div class="container">
           <form id="contactForm">
-            <h4>I'm ready. Let's do this.</h4>
+            <h4>Excellent. Let's talk.</h4>
             <input placeholder="Name*" type="text" name="name" tabindex="1" required>
             <input placeholder="Email Address*" type="email" name="email" tabindex="2" required>
             <input placeholder="Phone Number" type="tel" name="tel" tabindex="3">
@@ -274,12 +272,12 @@
       <div>
         <h6>Connect</h6>
         <p>
-          <a href='https://www.linkedin.com/in/joseph-oxborrow/'><i class="fa fa-linkedin"></i></a>
-          <a href='https://codepen.io/iosepa/'><i class="fa fa-codepen"></i></a>
-          <a href='https://bitbucket.org/jclimate/'><i class="fa fa-bitbucket"></i></a>
-          <a href='https://github.com/iosepa'><i class="fa fa-github"></i></a>
+          <a href='https://www.linkedin.com/in/joseph-oxborrow/'><i class="fab fa-linkedin"></i></a>
+          <a href='https://codepen.io/iosepa/'><i class="fab fa-codepen"></i></a>
 
-          <a href='mailto:hello@iosepa.io'><i class="fa fa-envelope-o"></i></a>
+          <a href='https://github.com/iosepa'><i class="fab fa-github"></i></a>
+
+          <a href='mailto:hello@iosepa.io'><i class="far fa-envelope"></i></a>
           <a href='tel:(717)229-7171'><i class="fa fa-phone"></i></a>
         </p>
       </div>
