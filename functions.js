@@ -1,6 +1,6 @@
 window.onload = function() {
   //auto Type text
-  autoType("greeting", 95, "Hello. Are you looking for an angular developer?");
+  autoType("greeting", 95, "Hello. Are you looking for a developer?");
 
   //show button to contact form
   setTimeout(function() {
