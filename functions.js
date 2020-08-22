@@ -1,23 +1,23 @@
-window.onload = function() {
+window.onload = function () {
   //auto Type text
-  autoType("greeting", 95, "Hello. Are you looking for a developer?");
+  autoType("greeting", 95, "Hello. I like to code. Want to be friends?");
 
   //show button to contact form
-  setTimeout(function() {
+  setTimeout(function () {
     document.getElementById("callToAction").style.opacity = "1";
   }, 4000);
 
   //makes sure navbar is correct when page is refreshed
   if (5 < window.scrollY) shrinkNav(window.scrollY);
 
-  window.onscroll = function() {
+  window.onscroll = function () {
     shrinkNav(window.scrollY);
   };
 
   //ajax for contact form
   document.getElementById("contactForm").addEventListener(
     "submit",
-    e => {
+    (e) => {
       const elements = document.getElementById("contactForm").elements;
       let postData = "";
       let custName = "";
@@ -38,11 +38,11 @@ window.onload = function() {
       fetch("send_form_email.php", {
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: postData,
-        method: "POST"
+        method: "POST",
       })
-        .then(response => response.text())
+        .then((response) => response.text())
         .then(
-          text => (document.getElementById("formResponse").innerHTML += text)
+          (text) => (document.getElementById("formResponse").innerHTML += text)
         );
 
       document.getElementById("contactForm").reset();
@@ -119,12 +119,12 @@ function menuToggle() {
 function autoType(elementID, typingSpeed, text) {
   const thhis = document.getElementById(elementID);
 
-  setTimeout(function() {
+  setTimeout(function () {
     thhis.style.opacity = "1";
     thhis.innerHTML = "";
     for (let i = 0; i < text.length; i++) {
-      (function(i, char) {
-        setTimeout(function() {
+      (function (i, char) {
+        setTimeout(function () {
           thhis.innerHTML += char;
         }, i * typingSpeed);
       })(i + 1, text[i]);
